@@ -1,0 +1,1 @@
+export default function propertyReducer(state = {loading: false, properties: [], reviews: []})
