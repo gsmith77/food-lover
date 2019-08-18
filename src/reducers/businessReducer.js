@@ -4,11 +4,10 @@ export default function businessReducer(state = {loading: false, businesses: [],
     switch(action.type){
 
         case 'LOADING_BUSINESSES':
-            return Object.assign({}, state, {loading: true})
+            return Object.assign({}, {...state}, {loading: true})
 
         case 'FETCH_BUSINESSES':
-            debugger
-            return {}
+            return {...state, businesses: [...state.businesses, action.payload.businesses].flat(), loading: false}
 
         case 'ADD_REVIEW':
 

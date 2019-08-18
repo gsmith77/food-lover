@@ -4,6 +4,6 @@ export const fetchBusinesses = (props) => {
         dispatch({type: 'LOADING_BUSINESSES'})
         return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${props.term}&location=${props.location}`, {headers:{"Authorization": `Bearer ${API_KEY}`}})
         .then(resp => resp.json())
-        .then(businesses => {debugger})
+        .then(businesses => dispatch({type:'FETCH_BUSINESSES', payload: businesses}))
     }
 }

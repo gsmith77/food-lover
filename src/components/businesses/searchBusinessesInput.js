@@ -33,7 +33,7 @@ export class SearchBusinessesInput extends Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Type of Food:</label>
+                    <label>What Are You Looking For?</label>
                     <input type="text" name="term" value={this.state.term} onChange={this.handleChange}/>
                     {"\n"}
                     <label>Location:</label>
