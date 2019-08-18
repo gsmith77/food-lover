@@ -1,6 +1,12 @@
 import React, {Component} from 'react'
+import ReviewsContainer from '../../containers/ReviewsContainer'
 
-export default class Business extends Component {
+class Business extends Component {
+
+    handleClick = (event) => {
+        event.preventDefault()
+        this.props.fetchReviews(this.props.business.id)
+    }
     render(){
         const business = this.props.business
         return(
@@ -8,8 +14,12 @@ export default class Business extends Component {
                 <li align="left">
                     <h4>{business.name}</h4>
                     <img alt="single business" id={business.name} src={business.image_url}></img>
+                    <button onClick={this.handleClick}>Reviews</button>
+                    <ReviewsContainer business={business}/>
                 </li>
             </div>
         )
     }
 }
+
+export default Business

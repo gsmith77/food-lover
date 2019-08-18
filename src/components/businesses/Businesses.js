@@ -6,7 +6,7 @@ export default class Businesses extends Component {
     render(){
         const generateBusinesses = () => {
             return this.props.businesses.map(business => {
-                return <Business key={business.id} business= {business}/>
+                return <Business key={business.id} business= {business} fetchReviews={this.props.fetchReviews}/>
             })
         }
         return (

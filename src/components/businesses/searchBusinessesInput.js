@@ -1,6 +1,4 @@
-import { fetchBusinesses } from '../businesses/fetchBusinesses'
 import React, {Component} from 'react'
-import { connect } from 'react-redux'
 
 const initialState = {
     term: '',
@@ -45,5 +43,5 @@ export class SearchBusinessesInput extends Component {
     }
 };
 
-export default connect(null, {fetchBusinesses})(SearchBusinessesInput)
+export default SearchBusinessesInput
 
