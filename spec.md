@@ -1,5 +1,5 @@
 [x] There are 2 container components 
-[ ] There are 5 stateless components 1, 2, 3, 4
+[x] There are 5 stateless components 
 [ ] There are 3 routes
 [ ] react-router is being used with proper RESTful routing 
 [x] Redux and redux-thunk middleware are being used to modify state change and make use of async     actions to send data and receive data from the server  
