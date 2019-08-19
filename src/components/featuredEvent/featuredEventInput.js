@@ -1,17 +1,11 @@
 import React, {Component} from 'react'
-import { fetchBusinesses } from '../../actions/fetchBusinesses'
+import { fetchFeaturedEvent } from '../../actions/fetchFeaturedEvent'
 import { connect } from 'react-redux'
-const initialState = {
-    term: '',
-    location: '',
-    limit: 20
-}
 
-export class SearchBusinessesInput extends Component {
-    constructor(props){
-        super(props)
+export class featuredEventInput extends Component {
+    constructor(){
+        super()
         this.state={
-            term: '',
             location: ''
         }
     }
@@ -24,17 +18,17 @@ export class SearchBusinessesInput extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.fetchBusinesses(this.state)
-        this.setState(initialState)
+        this.props.fetchFeaturedEvent(this.state)
+        this.setState({
+            location: ''
+        })
     }
 
     render(){
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>What Are You Looking For?</label>
-                    <input type="text" name="term" value={this.state.term} onChange={this.handleChange}/>
-                    {"\n"}
+                    <label>Enter Your Zip Code, City or State to find The Featured Event Near You!</label>
                     <label>Location:</label>
                     <input type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
                     <input type="submit"/>
@@ -44,5 +38,5 @@ export class SearchBusinessesInput extends Component {
     }
 };
 
-export default connect(null, {fetchBusinesses})(SearchBusinessesInput)
+export default connect(null, {fetchFeaturedEvent})(featuredEventInput)
 

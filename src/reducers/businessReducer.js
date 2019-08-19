@@ -1,5 +1,3 @@
-import uuid from 'uuid'
-
 export default function businessReducer(state = {loading: false, businesses: [], reviews: []}, action){
     switch(action.type){
 
@@ -11,14 +9,7 @@ export default function businessReducer(state = {loading: false, businesses: [],
 
             return {...state, businesses: [...state.businesses, action.payload.businesses].flat(), loading: false}
 
-        case 'ADD_REVIEW':
-
-            const review ={
-                id: uuid(),
-                text: "",//
-                businessId: ""//businesses id from business id
-            }
-            return {...state, reviews: [...state.reviews, review]} 
+        //REVIEWSREDUCER
 
         case 'LOADING_REVIEWS':
 
