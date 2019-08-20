@@ -4,7 +4,7 @@ import eventReducer from './eventReducer'
 
 const rootReducer = combineReducers({
     businesses: businessReducer,
-    event: eventReducer
+    events: eventReducer
 })
 
 export default rootReducer;

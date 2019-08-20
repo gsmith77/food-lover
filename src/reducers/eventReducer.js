@@ -1,4 +1,4 @@
-export default function eventReducer(state={ loading: false, event: []}, action){
+export default function eventReducer(state={ loading: false, events: []}, action){
     switch(action.type){
         case 'LOADING_EVENT':
 
@@ -6,7 +6,7 @@ export default function eventReducer(state={ loading: false, event: []}, action)
 
         case 'FETCH_EVENT':
 
-        return {...state, event: action.payload, loading: false}
+        return {...state, events: [...state.events, action.payload.events].flat(), loading: false}
 
         default:
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { fetchFeaturedEvent } from '../../actions/fetchFeaturedEvent'
+import { fetchEvents } from '../../actions/fetchEvents'
 import { connect } from 'react-redux'
 
 export class featuredEventInput extends Component {
@@ -18,7 +18,7 @@ export class featuredEventInput extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.fetchFeaturedEvent(this.state)
+        this.props.fetchEvents(this.state)
         this.setState({
             location: ''
         })
@@ -38,5 +38,5 @@ export class featuredEventInput extends Component {
     }
 };
 
-export default connect(null, {fetchFeaturedEvent})(featuredEventInput)
+export default connect(null, {fetchEvents})(featuredEventInput)
 

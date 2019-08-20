@@ -1,13 +1,16 @@
 import React, {Component} from 'react'
-import FeaturedEvent from '../components/featuredEvent/FeaturedEvent'
+import FeaturedEvents from '../components/featuredEvent/FeaturedEvents'
 import { connect } from 'react-redux'
 
 class FeaturedEventContainer extends Component{
 
+
     render(){
         return(
             <div>
-                <FeaturedEvent event={this.props.event}/>
+                <ol>
+                    <FeaturedEvents events={this.props.events}/>
+                </ol>
             </div>
         )
     }
@@ -15,7 +18,7 @@ class FeaturedEventContainer extends Component{
 
 const mapStateToProps = state => {
     return{
-        event: state.event.event
+        events: state.events.events
     }
 }
 
