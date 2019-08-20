@@ -5,6 +5,7 @@ import FeaturedEventContainer from './containers/FeaturedEventContainer'
 class App extends Component{
 
   render(){
+
     return (
       <div className="App">
         <BusinessesContainer />

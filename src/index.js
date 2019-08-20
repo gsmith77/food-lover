@@ -7,19 +7,12 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 import SearchBusinessesInput from './components/businesses/searchBusinessesInput';
 import featuredEventInput from './components/featuredEvent/featuredEventInput' 
 
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
-
-
-
-//MAKE HOME ROOT PATH RESEARCH THAT!
-
-
-
 
 const link = {
     width: '100px',
@@ -29,6 +22,8 @@ const link = {
     textDecoration: 'none',
     color: 'white',
   }
+
+
   const Navbar = () =>
   <div>
     <NavLink
@@ -65,15 +60,15 @@ const link = {
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
-        <Router>
-        <Navbar />
+      <App />
+      <Router>
+        <Navbar fixed="top" />
         <div>   
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/search_featured_event" component={featuredEventInput}/>
-        <Route exact path="/search_businesses" component={SearchBusinessesInput}/>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/search_featured_event" component={featuredEventInput}/>
+          <Route exact path="/search_businesses" component={SearchBusinessesInput}/>
         </div>     
-    </Router>
+      </Router>
     </Provider>,
     document.getElementById('root')
 );
