@@ -1489,3 +1489,973 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2019-08-20 19:18:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2019-08-20 21:03:28 -0700
+Started GET "/%PUBLIC_URL%/favicon.ico" for ::1 at 2019-08-20 21:03:28 -0700
+  
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/favicon.ico"):
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search_businesses" for 127.0.0.1 at 2019-08-20 21:10:32 -0700
+Processing by FetchController#search_businesses as */*
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2019-08-20 21:11:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2019-08-20 21:12:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search_businesses" for 127.0.0.1 at 2019-08-20 21:15:30 -0700
+Processing by FetchController#search_businesses as */*
+Completed 500 Internal Server Error in 61996ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `client' for SendFetch:Class):
+  
+app/services/send_fetch.rb:18:in `<class:SendFetch>'
+app/services/send_fetch.rb:2:in `<main>'
+app/controllers/fetch_controller.rb:7:in `search_businesses'
+Started GET "/search_businesses" for 127.0.0.1 at 2019-08-20 21:16:53 -0700
+Processing by FetchController#search_businesses as */*
+Started GET "/search_businesses?props=[object%20Object]" for 127.0.0.1 at 2019-08-20 21:17:48 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"props"=>"[object Object]"}
+Started GET "/search_businesses?props=[object%20Object]" for 127.0.0.1 at 2019-08-20 21:18:29 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"props"=>"[object Object]"}
+Started POST "/search_businesses?props=[object%20Object]" for 127.0.0.1 at 2019-08-20 21:20:58 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/search_businesses"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/search_businesses?props=[object%20Object]" for 127.0.0.1 at 2019-08-20 21:21:40 -0700
+Started GET "/search_businesses?term=undefined&location=undefined" for 127.0.0.1 at 2019-08-20 21:25:40 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"undefined", "location"=>"undefined"}
+Started GET "/search_businesses?term=undefined&location=undefined" for 127.0.0.1 at 2019-08-20 21:26:41 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"undefined", "location"=>"undefined"}
+Started GET "/search_businesses?term=undefined&location=undefined" for 127.0.0.1 at 2019-08-20 21:27:19 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"undefined", "location"=>"undefined"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:27:22 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:29:22 -0700
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:38:10 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:42:01 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:43:40 -0700
+Completed 500 Internal Server Error in 210039ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `term' for #<FetchController:0x00007f8b76e10a60>):
+  
+app/controllers/fetch_controller.rb:7:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:45:31 -0700
+Processing by FetchController#search_businesses as */*
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 55547ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:46:26 -0700
+Completed 500 Internal Server Error in 55548ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+Processing by FetchController#search_businesses as */*
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+  
+app/services/send_fetch.rb:6:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+app/services/send_fetch.rb:6:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/services/send_fetch.rb:6:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:46:34 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/services/send_fetch.rb:6:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:47:19 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/services/send_fetch.rb:6:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:47:59 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:48:17 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:48:26 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=food&location=Houston" for 127.0.0.1 at 2019-08-20 21:49:02 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"food", "location"=>"Houston"}
+Completed 204 No Content in 18469ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:49:31 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:50:19 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:50:56 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:51:32 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+Yelp::Error::MissingAPIKeys (You're missing an API key):
+  
+app/services/send_fetch.rb:20:in `<class:SendFetch>'
+app/services/send_fetch.rb:3:in `<main>'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:54:01 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:54:28 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:55:25 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:56:06 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 22092ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `api_key=' for #<Yelp::Configuration:0x00007f96c4fdf4c8>):
+  
+app/services/send_fetch.rb:16:in `block in call'
+app/services/send_fetch.rb:14:in `call'
+app/services/send_fetch.rb:9:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:56:54 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `API_KEY=' for #<Yelp::Configuration:0x00007fb7fee63058>):
+  
+app/services/send_fetch.rb:15:in `block in call'
+app/services/send_fetch.rb:14:in `call'
+app/services/send_fetch.rb:9:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:57:28 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 107821ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `Bearer=' for #<String:0x00007ff9d98487f0>):
+  
+app/services/send_fetch.rb:16:in `block in call'
+app/services/send_fetch.rb:14:in `call'
+app/services/send_fetch.rb:9:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 21:59:39 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+Yelp::Error::AlreadyConfigured (Gem cannot be reconfigured.  Initialize a new instance of Yelp::Client.):
+  
+app/services/send_fetch.rb:14:in `call'
+app/services/send_fetch.rb:9:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 22:00:19 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `api_key=' for #<Yelp::Configuration:0x00007fcd1d272da0>):
+  
+app/services/send_fetch.rb:15:in `block in call'
+app/services/send_fetch.rb:14:in `call'
+app/services/send_fetch.rb:9:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 22:04:47 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+Yelp::Error::AlreadyConfigured (Gem cannot be reconfigured.  Initialize a new instance of Yelp::Client.):
+  
+app/services/send_fetch.rb:14:in `call'
+app/services/send_fetch.rb:9:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 22:05:14 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-20 22:07:13 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+Yelp::Error::AlreadyConfigured (Gem cannot be reconfigured.  Initialize a new instance of Yelp::Client.):
+  
+app/services/send_fetch.rb:14:in `call'
+app/services/send_fetch.rb:9:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:09:11 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:09:45 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/services/send_fetch.rb:23: Invalid return in class/module body
+    return fetch(`https://cors-anywhere...
+    ^~~~~~):
+  
+app/services/send_fetch.rb:23: Invalid return in class/module body
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:10:05 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/services/send_fetch.rb:23: Invalid return in class/module body
+    return fetch(`https://cors-anywhere...
+    ^~~~~~):
+  
+app/services/send_fetch.rb:23: Invalid return in class/module body
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:10:26 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ApplicationService):
+  
+app/services/send_fetch.rb:2:in `<main>'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:10:39 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 112832ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:12:41 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:13:32 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/services/send_fetch.rb:5:in `initialize'
+app/controllers/fetch_controller.rb:6:in `new'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:13:50 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/services/send_fetch.rb:5: syntax error, unexpected tSYMBEG, expecting ')'
+    def initialize(:term, :location)
+                   ^
+/Users/grantwilliamsmith/yelp-clone/app/services/send_fetch.rb:26: syntax error, unexpected end, expecting end-of-input):
+  
+app/services/send_fetch.rb:5: syntax error, unexpected tSYMBEG, expecting ')'
+app/services/send_fetch.rb:26: syntax error, unexpected end, expecting end-of-input
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:14:16 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:15:08 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:17:37 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:18:22 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (bad argument (expected URI object or URI string)):
+  
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:18:41 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:18:59 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:20:26 -0700
+Completed 204 No Content in 102640ms (ActiveRecord: 0.0ms)
+
+
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 2551ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:20:50 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 64793ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:22:11 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:22:27 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:23:29 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `req' for #<SendFetch:0x00007fa6c858fe28>
+Did you mean?  redo):
+  
+app/services/send_fetch.rb:14:in `block in connection'
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:24:06 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `req' for #<SendFetch:0x00007f92f9a8df70>
+Did you mean?  redo):
+  
+app/services/send_fetch.rb:14:in `block in connection'
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:24:36 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `req' for #<SendFetch:0x00007f92fa2638f8>
+Did you mean?  redo):
+  
+app/services/send_fetch.rb:14:in `block in connection'
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:25:11 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 23996ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 11:30:04 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 14:39:21 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 14:39:41 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 37ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 14:42:09 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 14:44:09 -0700
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 14:45:56 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 15687ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 14:46:37 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 14:48:26 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 15:02:34 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 15:04:34 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 64160ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 15:05:51 -0700
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 255799ms (ActiveRecord: 0.0ms)
+
+
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 839ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 15:07:14 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 15:09:13 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 7370499ms (ActiveRecord: 0.0ms)
+
+
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 7491608ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:12:23 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::Error (:json is not registered on Faraday::Response):
+  
+app/services/send_fetch.rb:14:in `block in connection'
+app/services/send_fetch.rb:12:in `new'
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:19:39 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:21:38 -0700
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 150457ms (ActiveRecord: 0.0ms)
+
+
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:23:32 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 64055ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:24:49 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/services/send_fetch.rb:13: syntax error, unexpected ':', expecting '}'
+...          conn.headers {Bearer: ENV.fetch('YELP_API_KEY')}
+...                              ^
+/Users/grantwilliamsmith/yelp-clone/app/services/send_fetch.rb:13: syntax error, unexpected '}', expecting end
+...rer: ENV.fetch('YELP_API_KEY')}
+...                              ^
+/Users/grantwilliamsmith/yelp-clone/app/services/send_fetch.rb:22: syntax error, unexpected end, expecting end-of-input):
+  
+app/services/send_fetch.rb:13: syntax error, unexpected ':', expecting '}'
+app/services/send_fetch.rb:13: syntax error, unexpected '}', expecting end
+app/services/send_fetch.rb:22: syntax error, unexpected end, expecting end-of-input
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:25:55 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 90161ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:27:32 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:29:32 -0700
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 230273ms (ActiveRecord: 0.0ms)
+
+
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 5713ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (500 "Internal Server Error"):
+  
+app/services/send_fetch.rb:20:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:31:35 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:33:35 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:34:28 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:39:39 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (500 "Internal Server Error"):
+  
+app/services/send_fetch.rb:18:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:41:27 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (500 "Internal Server Error"):
+  
+app/services/send_fetch.rb:18:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:42:34 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 82963ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:44:04 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 31985ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:44:40 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (500 "Internal Server Error"):
+  
+app/services/send_fetch.rb:18:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:44:58 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (end of file reached):
+  
+app/services/send_fetch.rb:18:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:45:08 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 396ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:46:33 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:48:33 -0700
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 173568ms (ActiveRecord: 0.0ms)
+
+
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::Error (:request_headers is not registered on Faraday::Request):
+  
+app/services/send_fetch.rb:14:in `block in connection'
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:49:35 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::Error (:request_headers is not registered on Faraday::Request):
+  
+app/services/send_fetch.rb:14:in `block in connection'
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 17:59:13 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (bad argument (expected URI object or URI string)):
+  
+app/services/send_fetch.rb:12:in `connection'
+app/controllers/fetch_controller.rb:6:in `search_businesses'
+Started POST "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 20:58:34 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/search_businesses"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 20:59:05 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 118670ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant FetchController::RestClient):
+  
+app/controllers/fetch_controller.rb:9:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:01:14 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant FetchController::Yelp):
+  
+app/controllers/fetch_controller.rb:11:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:06:36 -0700
+  
+LoadError (cannot load such file -- rest-client):
+  
+app/controllers/fetch_controller.rb:3:in `<main>'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:07:32 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:08:45 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 838ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:09:16 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Redirected to http://localhost:3000../../src/actions/fetchBusinesses
+Completed 302 Found in 864ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:19:32 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:16: syntax error, unexpected =>, expecting end
+...       render json: results  => '../../src/actions/fetchBusi...
+...                             ^~):
+  
+app/controllers/fetch_controller.rb:16: syntax error, unexpected =>, expecting end
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:20:07 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:16: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/fetch_controller.rb:16: syntax error, unexpected '\n', expecting =>
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-21 21:20:21 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:16: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... json: results && redirect_to '../../src/actions/fetchBusine...
+...                              ^):
+  
+app/controllers/fetch_controller.rb:16: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('

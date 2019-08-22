@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 import SearchBusinessesInput from './components/businesses/searchBusinessesInput';
-import featuredEventInput from './components/featuredEvent/featuredEventInput' 
+import featuredEventInput from './components/featuredEvent/featuredEventInput'
 
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
