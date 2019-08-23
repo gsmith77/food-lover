@@ -14,7 +14,21 @@ class FetchController < ApplicationController
         )    
         results = JSON.parse(response.body)
         businesses = results['businesses']
-        render json: businesses
+        all_businesses = businesses.each do |business|
+            Business.find_or_create_by(
+            name: business['name'],
+            image_url: business['image_url'],
+            category: business['categories'][0]['title'],
+            rating: business['rating'],
+            address1: business['location']['address1'],
+            address2: business['location']['address2'],
+            city: business['location']['city'],
+            zip_code: business['location']['zip_code'],
+            country: business['location']['country'],
+            state: business['location']['state']
+            )
+        end
+        render json: all_businesses
     end
 
     def search_events
@@ -26,6 +40,7 @@ class FetchController < ApplicationController
         )    
         results = JSON.parse(response.body)
         events = results['events']
+        binding.pry
         render json: events
     end
 

@@ -7009,3 +7009,424 @@ Processing by FetchController#search_events as */*
 Completed 200 OK in 532ms (Views: 0.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/search_businesses?term=american&location=west%20oahu" for 127.0.0.1 at 2019-08-23 11:27:23 -0700
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBusinesses (20190823182004)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823182004_create_businesses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823182004"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-23 18:27:44.035389"], ["updated_at", "2019-08-23 18:27:44.035389"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 11:28:00 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 11:29:22 -0700
+Started GET "/search_businesses?term=food&location=94612" for 127.0.0.1 at 2019-08-23 11:29:52 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"food", "location"=>"94612"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 11:42:20 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address2: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected ':', expecting end
+            city: business['location']['city']
+                ^
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected ':', expecting end
+            zip_code: business['location']['zip_co...
+                    ^
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected ':', expecting end
+            country: business['location']['countr...
+                   ^
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected ':', expecting end
+            state: business['location']['state']
+                 ^
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected ':', expecting end
+app/controllers/fetch_controller.rb:27: syntax error, unexpected ':', expecting end
+app/controllers/fetch_controller.rb:28: syntax error, unexpected ':', expecting end
+app/controllers/fetch_controller.rb:29: syntax error, unexpected ':', expecting end
+app/controllers/fetch_controller.rb:30: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 11:43:10 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 500 Internal Server Error in 1331ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/fetch_controller.rb:22:in `[]'
+app/controllers/fetch_controller.rb:22:in `block in search_businesses'
+app/controllers/fetch_controller.rb:17:in `each'
+app/controllers/fetch_controller.rb:17:in `search_businesses'
+Started GET "/search_businesses?term=turkey%20burger&location=94612" for 127.0.0.1 at 2019-08-23 11:44:10 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"turkey burger", "location"=>"94612"}
+Completed 500 Internal Server Error in 832ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/fetch_controller.rb:22:in `[]'
+app/controllers/fetch_controller.rb:22:in `block in search_businesses'
+app/controllers/fetch_controller.rb:17:in `each'
+app/controllers/fetch_controller.rb:17:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 11:44:27 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBusinesses (20190823182004)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBusinesses (20190823182004)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190823182004_create_businesses.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "category" varchar, "rating" integer, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823182004_create_businesses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823182004"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-23 18:46:15.924641"], ["updated_at", "2019-08-23 18:46:15.924641"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 11:46:30 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 11:48:29 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 500 Internal Server Error in 94209ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/fetch_controller.rb:22:in `[]'
+app/controllers/fetch_controller.rb:22:in `block in search_businesses'
+app/controllers/fetch_controller.rb:17:in `each'
+app/controllers/fetch_controller.rb:17:in `search_businesses'
+Started GET "/search_businesses?term=American&location=New%20York" for 127.0.0.1 at 2019-08-23 11:50:09 -0700
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 11:50:56 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBusinesses (20190823182004)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "category" varchar, "rating" float, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823182004_create_businesses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823182004"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-23 18:51:28.821266"], ["updated_at", "2019-08-23 18:51:28.821266"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/search_businesses?term=food&location=Houston" for 127.0.0.1 at 2019-08-23 11:51:58 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"food", "location"=>"Houston"}
+Completed 500 Internal Server Error in 32853ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `save' for #<Array:0x00007fb865cf6640>):
+  
+app/controllers/fetch_controller.rb:32:in `search_businesses'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 11:52:41 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "BCK"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/6JlMlsDIcB53G02rvS05gw/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "933 Studewood St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77008"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.7ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "BCK"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/6JlMlsDIcB53G02rvS05gw/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "933 Studewood St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77008"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.105477"], ["updated_at", "2019-08-23 18:52:42.105477"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "BORI"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/E7nH-zi3_baZQa38u5-K9A/o.jpg"], ["category", "Korean"], ["rating", 4.5], ["address1", "1453 Witte Rd"], ["city", "Houston"], ["zip_code", "77080"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "BORI"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/E7nH-zi3_baZQa38u5-K9A/o.jpg"], ["category", "Korean"], ["rating", 4.5], ["address1", "1453 Witte Rd"], ["city", "Houston"], ["zip_code", "77080"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.112573"], ["updated_at", "2019-08-23 18:52:42.112573"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "B.B. Lemon"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/fgtJVurRFbRXf97aNUJFww/o.jpg"], ["category", "American (New)"], ["rating", 3.5], ["address1", "4319 Montrose Blvd"], ["city", "Houston"], ["zip_code", "77006"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "B.B. Lemon"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/fgtJVurRFbRXf97aNUJFww/o.jpg"], ["category", "American (New)"], ["rating", 3.5], ["address1", "4319 Montrose Blvd"], ["city", "Houston"], ["zip_code", "77006"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.121725"], ["updated_at", "2019-08-23 18:52:42.121725"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Grace's"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/NjyF4IJWrgJSM6gsICnljA/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["address1", "3111 Kirby Dr"], ["address2", ""], ["city", "Houston"], ["zip_code", "77098"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Grace's"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/NjyF4IJWrgJSM6gsICnljA/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["address1", "3111 Kirby Dr"], ["address2", ""], ["city", "Houston"], ["zip_code", "77098"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.126566"], ["updated_at", "2019-08-23 18:52:42.126566"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Nobie's"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/9byFsVnMNwzksKVA_qZJLg/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "2048 Colquitt St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77098"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nobie's"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/9byFsVnMNwzksKVA_qZJLg/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "2048 Colquitt St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77098"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.131146"], ["updated_at", "2019-08-23 18:52:42.131146"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Bosscat Kitchen & Libations"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/AWDjoTwd0tpzg4HVDapqOg/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "4310 Westheimer Rd"], ["address2", "Ste 150"], ["city", "Houston"], ["zip_code", "77027"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bosscat Kitchen & Libations"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/AWDjoTwd0tpzg4HVDapqOg/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "4310 Westheimer Rd"], ["address2", "Ste 150"], ["city", "Houston"], ["zip_code", "77027"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.134953"], ["updated_at", "2019-08-23 18:52:42.134953"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Ritual"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/gQ7KvbIXSkaYbUJ9_oHxhw/o.jpg"], ["category", "Southern"], ["rating", 4.0], ["address1", "602 Studewood St"], ["city", "Houston"], ["zip_code", "77007"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ritual"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/gQ7KvbIXSkaYbUJ9_oHxhw/o.jpg"], ["category", "Southern"], ["rating", 4.0], ["address1", "602 Studewood St"], ["city", "Houston"], ["zip_code", "77007"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.139768"], ["updated_at", "2019-08-23 18:52:42.139768"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Ember & Greens"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/m0f1aEV7F4L1JUJ3Pj47gw/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "9403B Katy Fwy"], ["city", "Houston"], ["zip_code", "77024"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ember & Greens"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/m0f1aEV7F4L1JUJ3Pj47gw/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "9403B Katy Fwy"], ["city", "Houston"], ["zip_code", "77024"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.144818"], ["updated_at", "2019-08-23 18:52:42.144818"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Mezza Grille"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/H7ftSm8WW4iRMHxf2FbVtA/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.5], ["address1", "6100 Westheimer Rd"], ["address2", ""], ["city", "Houston"], ["zip_code", "77057"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.6ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mezza Grille"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/H7ftSm8WW4iRMHxf2FbVtA/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.5], ["address1", "6100 Westheimer Rd"], ["address2", ""], ["city", "Houston"], ["zip_code", "77057"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.149673"], ["updated_at", "2019-08-23 18:52:42.149673"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Lazy Dog Restaurant & Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/2SwRBSwfJeIW_MGDLDtWzQ/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "20030 Northwest Fwy"], ["address2", ""], ["city", "Houston"], ["zip_code", "77065"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lazy Dog Restaurant & Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/2SwRBSwfJeIW_MGDLDtWzQ/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "20030 Northwest Fwy"], ["address2", ""], ["city", "Houston"], ["zip_code", "77065"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.154427"], ["updated_at", "2019-08-23 18:52:42.154427"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.8ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Dish Society"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/8AlwYVQ-5bkP5NNEejU6IA/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["address1", "5740 San Felipe St"], ["address2", "Ste 100"], ["city", "Houston"], ["zip_code", "77057"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dish Society"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/8AlwYVQ-5bkP5NNEejU6IA/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["address1", "5740 San Felipe St"], ["address2", "Ste 100"], ["city", "Houston"], ["zip_code", "77057"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.161914"], ["updated_at", "2019-08-23 18:52:42.161914"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The General Public"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/-J7eltdTBTOMtJ88mCrbmg/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["address1", "797 Sorella Ct"], ["address2", "Ste 118"], ["city", "Houston"], ["zip_code", "77024"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The General Public"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/-J7eltdTBTOMtJ88mCrbmg/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["address1", "797 Sorella Ct"], ["address2", "Ste 118"], ["city", "Houston"], ["zip_code", "77024"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.166247"], ["updated_at", "2019-08-23 18:52:42.166247"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Wholesome Kitchen"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/X22-6aTYWlv5jXQnBWHuVQ/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "250 Assay St"], ["address2", "Ste A"], ["city", "Houston"], ["zip_code", "77044"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wholesome Kitchen"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/X22-6aTYWlv5jXQnBWHuVQ/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "250 Assay St"], ["address2", "Ste A"], ["city", "Houston"], ["zip_code", "77044"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.170621"], ["updated_at", "2019-08-23 18:52:42.170621"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Flying Dumpling"], ["image_url", ""], ["category", "American (Traditional)"], ["rating", 5.0], ["address1", "4835 Calhoun Rd"], ["address2", "Ste E"], ["city", "Houston"], ["zip_code", "77004"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Flying Dumpling"], ["image_url", ""], ["category", "American (Traditional)"], ["rating", 5.0], ["address1", "4835 Calhoun Rd"], ["address2", "Ste E"], ["city", "Houston"], ["zip_code", "77004"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.175031"], ["updated_at", "2019-08-23 18:52:42.175031"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "State Fare Kitchen & Bar"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/2QtUWNbAHNdSgZaZjhDCbA/o.jpg"], ["category", "Southern"], ["rating", 4.0], ["address1", "947 Gessner Rd"], ["address2", "Ste B190"], ["city", "Houston"], ["zip_code", "77024"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.8ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "State Fare Kitchen & Bar"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/2QtUWNbAHNdSgZaZjhDCbA/o.jpg"], ["category", "Southern"], ["rating", 4.0], ["address1", "947 Gessner Rd"], ["address2", "Ste B190"], ["city", "Houston"], ["zip_code", "77024"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.179121"], ["updated_at", "2019-08-23 18:52:42.179121"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Roost"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/SnDffU59xKtbn8NNF2GVhA/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["address1", "1972 Fairview St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77019"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roost"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/SnDffU59xKtbn8NNF2GVhA/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["address1", "1972 Fairview St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77019"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.184250"], ["updated_at", "2019-08-23 18:52:42.184250"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Rustic"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/vO4b-nDIagt_7S9g1wiQJQ/o.jpg"], ["category", "Bars"], ["rating", 4.0], ["address1", "1836 Polk St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77003"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Rustic"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/vO4b-nDIagt_7S9g1wiQJQ/o.jpg"], ["category", "Bars"], ["rating", 4.0], ["address1", "1836 Polk St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77003"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.190240"], ["updated_at", "2019-08-23 18:52:42.190240"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Mia's Table"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/PTXW5RcivTj1pXDnhK5RGg/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["address1", "3131 Argonne St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77098"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mia's Table"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/PTXW5RcivTj1pXDnhK5RGg/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["address1", "3131 Argonne St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77098"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.193667"], ["updated_at", "2019-08-23 18:52:42.193667"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "benjy's"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/33jyVs31bFHQDG8KSReeGQ/o.jpg"], ["category", "Lounges"], ["rating", 4.0], ["address1", "2424 Dunstan Rd"], ["address2", "Ste 125"], ["city", "Houston"], ["zip_code", "77005"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "benjy's"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/33jyVs31bFHQDG8KSReeGQ/o.jpg"], ["category", "Lounges"], ["rating", 4.0], ["address1", "2424 Dunstan Rd"], ["address2", "Ste 125"], ["city", "Houston"], ["zip_code", "77005"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.198444"], ["updated_at", "2019-08-23 18:52:42.198444"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Classic"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/JJW20SWAT4jbqU3wc1pTgw/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "5922 Washington Ave"], ["address2", ""], ["city", "Houston"], ["zip_code", "77007"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.9ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Classic"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/JJW20SWAT4jbqU3wc1pTgw/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["address1", "5922 Washington Ave"], ["address2", ""], ["city", "Houston"], ["zip_code", "77007"], ["country", "US"], ["state", "TX"], ["created_at", "2019-08-23 18:52:42.202296"], ["updated_at", "2019-08-23 18:52:42.202296"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.5ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/controllers/fetch_controller.rb:31
