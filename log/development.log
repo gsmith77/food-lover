@@ -6271,3 +6271,741 @@ Processing by FetchController#business_reviews as */*
 Completed 200 OK in 558ms (Views: 0.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-22 22:42:29 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 899ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searchBusinessesInput.js" for 127.0.0.1 at 2019-08-22 23:08:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/searchBusinessesInput.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/src/index.js" for 127.0.0.1 at 2019-08-22 23:08:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/searchBusinessesInput.js" for 127.0.0.1 at 2019-08-22 23:08:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/searchBusinessesInput.js"):
+Started GET "/src/index.js" for 127.0.0.1 at 2019-08-22 23:08:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/searchBusinessesInput.js" for 127.0.0.1 at 2019-08-22 23:09:15 -0700
+Started GET "/src/index.js" for 127.0.0.1 at 2019-08-22 23:09:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/searchBusinessesInput.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/searchBusinessesInput.js" for 127.0.0.1 at 2019-08-22 23:10:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/searchBusinessesInput.js"):
+Started GET "/src/index.js" for 127.0.0.1 at 2019-08-22 23:10:02 -0700
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-22 23:52:13 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 963ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-22 23:53:31 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 790ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-22 23:54:31 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 814ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-22 23:55:43 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 941ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=Houston" for 127.0.0.1 at 2019-08-23 00:00:43 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"Houston"}
+Completed 200 OK in 594ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=Houston" for 127.0.0.1 at 2019-08-23 00:00:54 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"Houston"}
+Completed 200 OK in 1002ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=west%20oahu" for 127.0.0.1 at 2019-08-23 00:01:09 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"west oahu"}
+Completed 200 OK in 779ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:01:53 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 767ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:02:39 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 838ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:04:34 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 844ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=95219" for 127.0.0.1 at 2019-08-23 00:05:42 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"95219"}
+Completed 200 OK in 761ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=New%20York" for 127.0.0.1 at 2019-08-23 00:05:59 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"New York"}
+Completed 200 OK in 946ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:08:59 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 767ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:09:17 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 733ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=TqbzDpUI9_SREzH_AfejlQ" for 127.0.0.1 at 2019-08-23 00:09:24 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"TqbzDpUI9_SREzH_AfejlQ"}
+Completed 200 OK in 517ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:11:37 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 838ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:12:09 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 846ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:12:17 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 765ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:14:57 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 861ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:15:10 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 878ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:15:48 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 922ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:15:57 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 811ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=" for 127.0.0.1 at 2019-08-23 00:16:19 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>""}
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/fetch_controller.rb:10:in `search_businesses'
+Started GET "/search_businesses?term=food&location=Houston" for 127.0.0.1 at 2019-08-23 00:16:24 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"food", "location"=>"Houston"}
+Completed 200 OK in 784ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:16:30 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 804ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:16:33 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 395ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:16:42 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 771ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:18:38 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 977ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:18:56 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 754ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:19:07 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 873ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:19:15 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 775ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:19:28 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 810ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:19:41 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 772ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:19:43 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 356ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:20:13 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 819ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:20:29 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 786ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:20:47 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 779ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:23:02 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 859ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:23:49 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 766ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:24:00 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 908ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:24:28 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 859ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:25:25 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 952ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:25:40 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 828ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:25:58 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 777ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:26:18 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 905ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:26:22 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 327ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:27:42 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 808ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:28:05 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 776ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=XmCwZqAxTl-vL0rG7XJ98A" for 127.0.0.1 at 2019-08-23 00:28:20 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"XmCwZqAxTl-vL0rG7XJ98A"}
+Completed 200 OK in 416ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:28:53 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 673ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=UpXkkAMbb7LAMh2g7Xwddg" for 127.0.0.1 at 2019-08-23 00:28:55 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"UpXkkAMbb7LAMh2g7Xwddg"}
+Completed 200 OK in 279ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:29:05 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 796ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:29:07 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 517ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:29:37 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 815ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=UpXkkAMbb7LAMh2g7Xwddg" for 127.0.0.1 at 2019-08-23 00:29:39 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"UpXkkAMbb7LAMh2g7Xwddg"}
+Completed 200 OK in 322ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=New%20York" for 127.0.0.1 at 2019-08-23 00:31:15 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"New York"}
+Completed 200 OK in 889ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=C-8mGN7lt5rIraO5n-15ug" for 127.0.0.1 at 2019-08-23 00:31:17 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"C-8mGN7lt5rIraO5n-15ug"}
+Completed 200 OK in 457ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=sVG1whNWHhlbjP6p027YcA" for 127.0.0.1 at 2019-08-23 00:31:48 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"sVG1whNWHhlbjP6p027YcA"}
+Completed 200 OK in 310ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:32:07 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 922ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:32:10 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 407ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=food&location=Houston" for 127.0.0.1 at 2019-08-23 00:32:24 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"food", "location"=>"Houston"}
+Completed 200 OK in 823ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=Y_alysR9cw4RZsOip0cQbw" for 127.0.0.1 at 2019-08-23 00:32:26 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"Y_alysR9cw4RZsOip0cQbw"}
+Completed 200 OK in 361ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:32:52 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 902ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:32:53 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 334ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:33:14 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 864ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=UpXkkAMbb7LAMh2g7Xwddg" for 127.0.0.1 at 2019-08-23 00:33:16 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"UpXkkAMbb7LAMh2g7Xwddg"}
+Completed 200 OK in 316ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:33:33 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 827ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:33:34 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 475ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:33:46 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 796ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:33:48 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 431ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:33:51 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 405ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=west%20oahu" for 127.0.0.1 at 2019-08-23 00:35:03 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"west oahu"}
+Completed 200 OK in 817ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=food&location=94612" for 127.0.0.1 at 2019-08-23 00:35:16 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"food", "location"=>"94612"}
+Completed 200 OK in 797ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=TIBJgbXNxd7QteXlunpZRg" for 127.0.0.1 at 2019-08-23 00:35:21 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"TIBJgbXNxd7QteXlunpZRg"}
+Completed 200 OK in 443ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 00:35:37 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"94612"}
+Completed 200 OK in 773ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:35:58 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 791ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:36:23 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 854ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:36:25 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 501ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 00:36:48 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"Houston"}
+Completed 200 OK in 796ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=BKu4VGO2bW3nw8kc_ryumw" for 127.0.0.1 at 2019-08-23 00:36:49 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"BKu4VGO2bW3nw8kc_ryumw"}
+Completed 200 OK in 335ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_businesses?term=food&location=94612" for 127.0.0.1 at 2019-08-23 00:37:44 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"food", "location"=>"94612"}
+Completed 200 OK in 808ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_reviews?id=TIBJgbXNxd7QteXlunpZRg" for 127.0.0.1 at 2019-08-23 00:37:47 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"TIBJgbXNxd7QteXlunpZRg"}
+Completed 200 OK in 305ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=95219" for 127.0.0.1 at 2019-08-23 00:38:16 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"95219"}
+Completed 200 OK in 549ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=location" for 127.0.0.1 at 2019-08-23 00:38:28 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"location"}
+Completed 200 OK in 945ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=Houston" for 127.0.0.1 at 2019-08-23 00:39:42 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"Houston"}
+Completed 200 OK in 588ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=Houston" for 127.0.0.1 at 2019-08-23 00:40:03 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"Houston"}
+Completed 200 OK in 574ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=Houston" for 127.0.0.1 at 2019-08-23 00:40:31 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"Houston"}
+Completed 200 OK in 514ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search_events?location=Houston" for 127.0.0.1 at 2019-08-23 00:40:52 -0700
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"Houston"}
+Completed 200 OK in 532ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+

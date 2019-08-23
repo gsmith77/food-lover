@@ -29,8 +29,11 @@ export class SearchBusinessesInput extends Component {
     }
 
     render(){
+        var divStyle={position:'relative',
+            bottom: '-30px'}
         return(
-            <div>
+     
+            <div className="input" style={divStyle}>
                 <form onSubmit={this.handleSubmit}>
                     <label>What Are You Looking For?</label>
                     <input type="text" name="term" value={this.state.term} onChange={this.handleChange}/>

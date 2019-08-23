@@ -5,13 +5,14 @@ class FeaturedEvents extends Component {
     
     
     render(){
+        const listStyle={align: 'left', width: '500px'}
         const renderEvents = () => {
             return this.props.events.map(event =>{
                 if(typeof event.name === "string"){
                     return(
-                        <li>
+                        <li style={listStyle}>
                             <h2>{event.name}</h2>
-                            <img alt="event" src={event.image_url}></img>
+                            <img alt="no image" src={event.image_url}></img>
                             <p>            
                                 {event.attending_count} guest(s) are attending
                                 {'\n'}

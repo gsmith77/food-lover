@@ -18,9 +18,10 @@ const link = {
     width: '100px',
     padding: '12px',
     margin: '0 6px 6px',
-    background: 'blue',
+    background: 'black',
     textDecoration: 'none',
     color: 'white',
+    position: 'relative'
   }
 
 
@@ -34,7 +35,7 @@ const link = {
       style={link}
       /* add prop for activeStyle */
       activeStyle={{
-        background: 'darkblue'
+        background: 'red'
       }}
     >Home</NavLink>
     <NavLink
@@ -42,7 +43,7 @@ const link = {
       exact
       style={link}
       activeStyle={{
-        background: 'darkblue'
+        background: 'red'
       }}
     >Featured Event</NavLink>
     <NavLink
@@ -50,7 +51,7 @@ const link = {
       exact
       style={link}
       activeStyle={{
-        background: 'darkblue'
+        background: 'red'
       }}
     >Search Foods</NavLink>
   </div>;

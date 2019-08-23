@@ -25,8 +25,10 @@ export class featuredEventInput extends Component {
     }
 
     render(){
+        var divStyle={position:'relative',
+        bottom: '-30px'}
         return(
-            <div>
+            <div style={divStyle}>
                 <form onSubmit={this.handleSubmit}>
                     <label>Enter Your Zip Code, City or State to find The Featured Event Near You!</label>
                     <label>Location:</label>

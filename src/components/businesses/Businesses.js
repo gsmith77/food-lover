@@ -9,6 +9,7 @@ export default class Businesses extends Component {
                 return <Business key={business.id} business= {business} fetchReviews={this.props.fetchReviews}/>
             })
         }
+
         return (
             <div>
                 <ol>

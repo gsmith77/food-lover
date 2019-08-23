@@ -11,10 +11,10 @@ export default class Reviews extends Component {
         const renderReviews = () => {
             return thisBusinessesReviews().map(review => {
                     return(
-                        <li key={review.id}>
+                        <li style={{width: '300px'}} key={review.id}>
                             <h4>{review.user.name}</h4>
                             {"\n"}
-                            <p>{review.rating}</p>
+                            <p>Rating: {review.rating}</p>
                             {"\n"}
                             <p>{review.text}</p>
                         </li>
