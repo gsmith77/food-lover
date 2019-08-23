@@ -4,7 +4,10 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "dotenv": "^8.1.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.0",
@@ -12,7 +15,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "webpacker": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

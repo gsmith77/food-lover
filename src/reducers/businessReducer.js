@@ -6,8 +6,7 @@ export default function businessReducer(state = {loading: false, businesses: [],
             return Object.assign({}, {...state}, {loading: true})
 
         case 'FETCH_BUSINESSES':
-        debugger
-            return {...state, businesses: [...state.businesses, action.payload.businesses].flat(), loading: false}
+            return {...state, businesses: [...state.businesses, action.payload].flat(), loading: false}
 
         //REVIEWSREDUCER
 
@@ -16,7 +15,7 @@ export default function businessReducer(state = {loading: false, businesses: [],
             return Object.assign({}, {...state}, {loading: true})
 
         case 'FETCH_REVIEWS':
-            const newReviews= action.payload[0].reviews.map(review => {
+            const newReviews= action.payload[0].map(review => {
             return(review = {...review, businessId: action.payload[1] })})
             return {...state, reviews: [...state.reviews, newReviews].flat(), loading:false} 
 

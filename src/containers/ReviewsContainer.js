@@ -8,7 +8,7 @@ class ReviewsContainer extends Component {
     render(){
         return(
             <div>
-                <ol>
+                <ol id="allReviews">
                     <Reviews business={this.props.business} reviews={this.props.reviews} />
                 </ol>
             </div>

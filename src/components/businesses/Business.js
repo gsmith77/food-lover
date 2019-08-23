@@ -5,7 +5,7 @@ class Business extends Component {
 
     handleClick = (event) => {
         event.preventDefault()
-        this.props.fetchReviews(this.props.business.id)
+        this.props.fetchReviews({id: this.props.business.id})
     }
     render(){
         const business = this.props.business
