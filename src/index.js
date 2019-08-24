@@ -45,7 +45,7 @@ const link = {
       activeStyle={{
         background: 'red'
       }}
-    >Featured Event</NavLink>
+    >Featured Events</NavLink>
     <NavLink
       to="/search_businesses"
       exact

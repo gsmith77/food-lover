@@ -30,7 +30,7 @@ export class featuredEventInput extends Component {
         return(
             <div style={divStyle}>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Enter Your Zip Code, City or State to find The Featured Event Near You!</label>
+                    <label>Enter Your Zip Code, City or State to find The Featured Events Near You!</label>
                     <label>Location:</label>
                     <input type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
                     <input type="submit"/>

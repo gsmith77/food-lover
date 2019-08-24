@@ -5,7 +5,9 @@ export default class Reviews extends Component {
     render(){
         
         const thisBusinessesReviews = () => {
-            return this.props.reviews.filter(review => { return (review.businessId === this.props.business.id)})
+            let newProps = this.props.reviews.filter(review => { return (review.businessId === this.props.business.id)})
+            //check new this.props.reviews on the filtering got it to be a unique set of reviews
+            return newProps
         }
 
         const renderReviews = () => {

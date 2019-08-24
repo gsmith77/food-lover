@@ -10,9 +10,9 @@ class FeaturedEvents extends Component {
             return this.props.events.map(event =>{
                 if(typeof event.name === "string"){
                     return(
-                        <li style={listStyle}>
+                        <li style={listStyle} key={event.id}>
                             <h2>{event.name}</h2>
-                            <img alt="no image" src={event.image_url}></img>
+                            <img alt="See your Event Live!" src={event.image_url}></img>
                             <p>            
                                 {event.attending_count} guest(s) are attending
                                 {'\n'}
