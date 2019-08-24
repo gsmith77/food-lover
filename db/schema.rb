@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_23_201858) do
     t.string "image_url"
     t.string "category"
     t.float "rating"
+    t.string "price"
     t.string "address1"
     t.string "address2"
     t.string "city"

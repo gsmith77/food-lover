@@ -12831,3 +12831,758 @@ Processing by FetchController#search_events as */*
 Completed 200 OK in 750ms (Views: 0.8ms | ActiveRecord: 5.8ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBusinesses (20190823182004)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "category" varchar, "rating" float, "price" varchar, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823182004_create_businesses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823182004"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20190823200604)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "attending_count" integer, "category" varchar, "cost" float, "description" varchar, "image_url" varchar, "interested_count" integer, "is_canceled" boolean, "is_free" boolean, "name" varchar, "time_end" varchar, "time_start" varchar, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823200604_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823200604"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateReviews (20190823201858)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar, "rating" integer, "user_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823201858_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823201858"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-24 05:01:12.614487"], ["updated_at", "2019-08-24 05:01:12.614487"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/search_businesses?term=american&location=west%20oahu" for 127.0.0.1 at 2019-08-23 22:01:32 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"american", "location"=>"west oahu"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "DB Grill"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/h9tSyYnHSdXpfTZwcjA1Kw/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["address1", "4450 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "DB Grill"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/h9tSyYnHSdXpfTZwcjA1Kw/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["address1", "4450 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.927866"], ["updated_at", "2019-08-24 05:01:32.927866"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Cheesecake Factory"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PlkKvZUvEoFrxN62RKUVTw/o.jpg"], ["category", "Desserts"], ["rating", 3.5], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Cheesecake Factory"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PlkKvZUvEoFrxN62RKUVTw/o.jpg"], ["category", "Desserts"], ["rating", 3.5], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.932098"], ["updated_at", "2019-08-24 05:01:32.932098"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Dickey's Barbecue Pit"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/8XM0OPUrnrqUyomekCyYxQ/o.jpg"], ["category", "Southern"], ["rating", 3.5], ["price", "$$"], ["address1", "91-710 C Farrington Hwy"], ["address2", "Ste 350"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dickey's Barbecue Pit"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/8XM0OPUrnrqUyomekCyYxQ/o.jpg"], ["category", "Southern"], ["rating", 3.5], ["price", "$$"], ["address1", "91-710 C Farrington Hwy"], ["address2", "Ste 350"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.935893"], ["updated_at", "2019-08-24 05:01:32.935893"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/2ThqwLYhX_OxaXkJhV9yMQ/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["address1", "91-1001 Kaimalie St"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/2ThqwLYhX_OxaXkJhV9yMQ/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["address1", "91-1001 Kaimalie St"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.938818"], ["updated_at", "2019-08-24 05:01:32.938818"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "My Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/Cn1fjKxsQsopyY_HyNaKfQ/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["address1", "563 Farrington Hwy"], ["address2", "Ste 101B"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "My Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/Cn1fjKxsQsopyY_HyNaKfQ/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["address1", "563 Farrington Hwy"], ["address2", "Ste 101B"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.943599"], ["updated_at", "2019-08-24 05:01:32.943599"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Monkeypod Kitchen"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/16UOVcG5W1PmFTUCRt-7qA/o.jpg"], ["category", "Hawaiian"], ["rating", 4.0], ["price", "$$"], ["address1", "92-1048 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Monkeypod Kitchen"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/16UOVcG5W1PmFTUCRt-7qA/o.jpg"], ["category", "Hawaiian"], ["rating", 4.0], ["price", "$$"], ["address1", "92-1048 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.948471"], ["updated_at", "2019-08-24 05:01:32.948471"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Pearl"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/0iU7XDm6evT6qr1UUG6JMg/o.jpg"], ["category", "American (New)"], ["rating", 5.0], ["price", "$$"], ["address1", "96-045 Ala Ike St"], ["address2", ""], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Pearl"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/0iU7XDm6evT6qr1UUG6JMg/o.jpg"], ["category", "American (New)"], ["rating", 5.0], ["price", "$$"], ["address1", "96-045 Ala Ike St"], ["address2", ""], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.955378"], ["updated_at", "2019-08-24 05:01:32.955378"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/3RZGqMZCUH-VErQ8JRaAFw/o.jpg"], ["category", "Steakhouses"], ["rating", 4.0], ["price", "$$"], ["address1", "94-673 Kupuohi St"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/3RZGqMZCUH-VErQ8JRaAFw/o.jpg"], ["category", "Steakhouses"], ["rating", 4.0], ["price", "$$"], ["address1", "94-673 Kupuohi St"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.962011"], ["updated_at", "2019-08-24 05:01:32.962011"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "La Hiki Kitchen"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/XNBmhbVR4GSd_gK_v8lC4g/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.0], ["price", "$$$$"], ["address1", "92-1001 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "La Hiki Kitchen"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/XNBmhbVR4GSd_gK_v8lC4g/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.0], ["price", "$$$$"], ["address1", "92-1001 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.970153"], ["updated_at", "2019-08-24 05:01:32.970153"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Chili's"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PbRKpXL2b-gD68-uS6-5MA/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["address1", "590 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chili's"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PbRKpXL2b-gD68-uS6-5MA/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["address1", "590 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.976992"], ["updated_at", "2019-08-24 05:01:32.976992"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Hideaway Club"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/ow07aGG_5RGA7nPeLFgMKA/o.jpg"], ["category", "Social Clubs"], ["rating", 4.5], ["price", "$"], ["address1", "1 Coral Sea Rd"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Hideaway Club"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/ow07aGG_5RGA7nPeLFgMKA/o.jpg"], ["category", "Social Clubs"], ["rating", 4.5], ["price", "$"], ["address1", "1 Coral Sea Rd"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.982983"], ["updated_at", "2019-08-24 05:01:32.982983"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Takumi Japanese Restaurant & Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/j2ikVicG2npYd42c7fCoHQ/o.jpg"], ["category", "Japanese"], ["rating", 4.0], ["price", "$$"], ["address1", "4850 Kapolei Pkwy"], ["address2", "Ste 401"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Takumi Japanese Restaurant & Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/j2ikVicG2npYd42c7fCoHQ/o.jpg"], ["category", "Japanese"], ["rating", 4.0], ["price", "$$"], ["address1", "4850 Kapolei Pkwy"], ["address2", "Ste 401"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.988502"], ["updated_at", "2019-08-24 05:01:32.988502"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Waipahu Cafe"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/1ZYjknkZVvldlWhl6jE-yg/o.jpg"], ["category", "Diners"], ["rating", 4.0], ["price", "$"], ["address1", "94-300 Farrington Hwy"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (1.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Waipahu Cafe"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/1ZYjknkZVvldlWhl6jE-yg/o.jpg"], ["category", "Diners"], ["rating", 4.0], ["price", "$"], ["address1", "94-300 Farrington Hwy"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.994358"], ["updated_at", "2019-08-24 05:01:32.994358"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Kapolei Golf Club Restaurant"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/eey60ldsjfZ60fVLRqAU0w/o.jpg"], ["category", "Japanese"], ["rating", 3.5], ["price", "$$"], ["address1", "91-701 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kapolei Golf Club Restaurant"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/eey60ldsjfZ60fVLRqAU0w/o.jpg"], ["category", "Japanese"], ["rating", 3.5], ["price", "$$"], ["address1", "91-701 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:32.998896"], ["updated_at", "2019-08-24 05:01:32.998896"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.9ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Applebee's Grill + Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/K2hw6KxD3_zNhvPGNHiWSw/o.jpg"], ["category", "American (Traditional)"], ["rating", 2.5], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Ste 113"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Applebee's Grill + Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/K2hw6KxD3_zNhvPGNHiWSw/o.jpg"], ["category", "American (Traditional)"], ["rating", 2.5], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Ste 113"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:33.004109"], ["updated_at", "2019-08-24 05:01:33.004109"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Johnny Rockets"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/lPBJn573mUHPCVogqwTw5g/o.jpg"], ["category", "Diners"], ["rating", 3.0], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Unit 700"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Johnny Rockets"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/lPBJn573mUHPCVogqwTw5g/o.jpg"], ["category", "Diners"], ["rating", 3.0], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Unit 700"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:33.009156"], ["updated_at", "2019-08-24 05:01:33.009156"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Dana's Restaurant and Catering"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/BHA5HrQtEtUXnYZRMo53dg/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["address1", "94-235 Hanawai Cir"], ["address2", ""], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dana's Restaurant and Catering"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/BHA5HrQtEtUXnYZRMo53dg/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["address1", "94-235 Hanawai Cir"], ["address2", ""], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:33.014833"], ["updated_at", "2019-08-24 05:01:33.014833"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "California Pizza Kitchen at Kapolei"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/6F8W7tF_UcFHZUfAAe3lNA/o.jpg"], ["category", "Pizza"], ["rating", 3.0], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Suite 500"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "California Pizza Kitchen at Kapolei"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/6F8W7tF_UcFHZUfAAe3lNA/o.jpg"], ["category", "Pizza"], ["rating", 3.0], ["price", "$$"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Suite 500"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:33.019556"], ["updated_at", "2019-08-24 05:01:33.019556"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Button Up Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/mFZXpaCeBFfAyIQfjBQSnA/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["address1", "719 Kamehameha Hwy"], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Button Up Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/mFZXpaCeBFfAyIQfjBQSnA/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["address1", "719 Kamehameha Hwy"], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:33.024543"], ["updated_at", "2019-08-24 05:01:33.024543"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Bird of Paradise"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/rL_A2BanicIvvzTxym-JcQ/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["price", "$$"], ["address1", "91-1200 Fort Weaver Rd"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bird of Paradise"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/rL_A2BanicIvvzTxym-JcQ/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["price", "$$"], ["address1", "91-1200 Fort Weaver Rd"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:01:33.028969"], ["updated_at", "2019-08-24 05:01:33.028969"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+Completed 200 OK in 952ms (Views: 12.6ms | ActiveRecord: 32.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBusinesses (20190823182004)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "category" varchar, "rating" float, "price" varchar, "url" varchar, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823182004_create_businesses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823182004"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20190823200604)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "attending_count" integer, "category" varchar, "cost" float, "description" varchar, "image_url" varchar, "interested_count" integer, "is_canceled" boolean, "is_free" boolean, "name" varchar, "time_end" varchar, "time_start" varchar, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823200604_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823200604"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateReviews (20190823201858)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar, "rating" integer, "user_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823201858_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823201858"]]
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-24 05:03:53.756482"], ["updated_at", "2019-08-24 05:03:53.756482"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 22:04:10 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=American&location=west%20oahu" for 127.0.0.1 at 2019-08-23 22:04:31 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=food&location=New%20York" for 127.0.0.1 at 2019-08-23 22:05:13 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=food&location=Houston" for 127.0.0.1 at 2019-08-23 22:06:14 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=American&location=94612" for 127.0.0.1 at 2019-08-23 22:06:30 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=food&location=94612" for 127.0.0.1 at 2019-08-23 22:06:41 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=food&location=94612" for 127.0.0.1 at 2019-08-23 22:07:08 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=American&location=Houston" for 127.0.0.1 at 2019-08-23 22:07:55 -0700
+  
+SyntaxError (/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+            address1: business['location']['addre...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+            address2: business['location']['addres...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+            city: business['location']['city'],
+            ^~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+            zip_code: business['location']['zip_co...
+            ^~~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+            country: business['location']['countr...
+            ^~~~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+            state: business['location']['state']
+            ^~~~~~
+/Users/grantwilliamsmith/yelp-clone/app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+            )
+            ^):
+  
+app/controllers/fetch_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/fetch_controller.rb:26: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:28: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:29: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:30: syntax error, unexpected tLABEL, expecting '='
+app/controllers/fetch_controller.rb:31: syntax error, unexpected ')', expecting end
+Started GET "/search_businesses?term=American&location=west%20oahu" for 127.0.0.1 at 2019-08-23 22:09:00 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"American", "location"=>"west oahu"}
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "DB Grill"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/h9tSyYnHSdXpfTZwcjA1Kw/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/db-grill-kapolei-3?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "4450 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (1.0ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "DB Grill"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/h9tSyYnHSdXpfTZwcjA1Kw/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/db-grill-kapolei-3?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "4450 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.235933"], ["updated_at", "2019-08-24 05:09:02.235933"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Cheesecake Factory"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PlkKvZUvEoFrxN62RKUVTw/o.jpg"], ["category", "Desserts"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/the-cheesecake-factory-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Cheesecake Factory"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PlkKvZUvEoFrxN62RKUVTw/o.jpg"], ["category", "Desserts"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/the-cheesecake-factory-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.241165"], ["updated_at", "2019-08-24 05:09:02.241165"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Dickey's Barbecue Pit"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/8XM0OPUrnrqUyomekCyYxQ/o.jpg"], ["category", "Southern"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/dickeys-barbecue-pit-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-710 C Farrington Hwy"], ["address2", "Ste 350"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dickey's Barbecue Pit"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/8XM0OPUrnrqUyomekCyYxQ/o.jpg"], ["category", "Southern"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/dickeys-barbecue-pit-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-710 C Farrington Hwy"], ["address2", "Ste 350"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.244272"], ["updated_at", "2019-08-24 05:09:02.244272"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/2ThqwLYhX_OxaXkJhV9yMQ/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/tianos-restaurant-ewa-beach-4?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-1001 Kaimalie St"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/2ThqwLYhX_OxaXkJhV9yMQ/o.jpg"], ["category", "American (New)"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/tianos-restaurant-ewa-beach-4?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-1001 Kaimalie St"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.247404"], ["updated_at", "2019-08-24 05:09:02.247404"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "My Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/Cn1fjKxsQsopyY_HyNaKfQ/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/my-cafe-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "563 Farrington Hwy"], ["address2", "Ste 101B"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "My Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/Cn1fjKxsQsopyY_HyNaKfQ/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/my-cafe-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "563 Farrington Hwy"], ["address2", "Ste 101B"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.251721"], ["updated_at", "2019-08-24 05:09:02.251721"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Monkeypod Kitchen"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/16UOVcG5W1PmFTUCRt-7qA/o.jpg"], ["category", "Hawaiian"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/monkeypod-kitchen-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "92-1048 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Monkeypod Kitchen"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/16UOVcG5W1PmFTUCRt-7qA/o.jpg"], ["category", "Hawaiian"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/monkeypod-kitchen-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "92-1048 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.255817"], ["updated_at", "2019-08-24 05:09:02.255817"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Pearl"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/0iU7XDm6evT6qr1UUG6JMg/o.jpg"], ["category", "American (New)"], ["rating", 5.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/the-pearl-pearl-city?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "96-045 Ala Ike St"], ["address2", ""], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Pearl"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/0iU7XDm6evT6qr1UUG6JMg/o.jpg"], ["category", "American (New)"], ["rating", 5.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/the-pearl-pearl-city?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "96-045 Ala Ike St"], ["address2", ""], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.259690"], ["updated_at", "2019-08-24 05:09:02.259690"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/3RZGqMZCUH-VErQ8JRaAFw/o.jpg"], ["category", "Steakhouses"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/tianos-restaurant-waipahu-8?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "94-673 Kupuohi St"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tiano's Restaurant"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/3RZGqMZCUH-VErQ8JRaAFw/o.jpg"], ["category", "Steakhouses"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/tianos-restaurant-waipahu-8?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "94-673 Kupuohi St"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.263545"], ["updated_at", "2019-08-24 05:09:02.263545"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "La Hiki Kitchen"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/XNBmhbVR4GSd_gK_v8lC4g/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.0], ["price", "$$$$"], ["url", "https://www.yelp.com/biz/la-hiki-kitchen-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "92-1001 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "La Hiki Kitchen"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/XNBmhbVR4GSd_gK_v8lC4g/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.0], ["price", "$$$$"], ["url", "https://www.yelp.com/biz/la-hiki-kitchen-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "92-1001 Olani St"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.266407"], ["updated_at", "2019-08-24 05:09:02.266407"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Chili's"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PbRKpXL2b-gD68-uS6-5MA/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/chilis-kapolei-4?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "590 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chili's"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/PbRKpXL2b-gD68-uS6-5MA/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/chilis-kapolei-4?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "590 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.270142"], ["updated_at", "2019-08-24 05:09:02.270142"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "The Hideaway Club"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/ow07aGG_5RGA7nPeLFgMKA/o.jpg"], ["category", "Social Clubs"], ["rating", 4.5], ["price", "$"], ["url", "https://www.yelp.com/biz/the-hideaway-club-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "1 Coral Sea Rd"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Hideaway Club"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/ow07aGG_5RGA7nPeLFgMKA/o.jpg"], ["category", "Social Clubs"], ["rating", 4.5], ["price", "$"], ["url", "https://www.yelp.com/biz/the-hideaway-club-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "1 Coral Sea Rd"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.273126"], ["updated_at", "2019-08-24 05:09:02.273126"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Takumi Japanese Restaurant & Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/j2ikVicG2npYd42c7fCoHQ/o.jpg"], ["category", "Japanese"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/takumi-japanese-restaurant-and-bar-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "4850 Kapolei Pkwy"], ["address2", "Ste 401"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Takumi Japanese Restaurant & Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/j2ikVicG2npYd42c7fCoHQ/o.jpg"], ["category", "Japanese"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/takumi-japanese-restaurant-and-bar-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "4850 Kapolei Pkwy"], ["address2", "Ste 401"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.276820"], ["updated_at", "2019-08-24 05:09:02.276820"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Waipahu Cafe"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/1ZYjknkZVvldlWhl6jE-yg/o.jpg"], ["category", "Diners"], ["rating", 4.0], ["price", "$"], ["url", "https://www.yelp.com/biz/waipahu-cafe-waipahu?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "94-300 Farrington Hwy"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Waipahu Cafe"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/1ZYjknkZVvldlWhl6jE-yg/o.jpg"], ["category", "Diners"], ["rating", 4.0], ["price", "$"], ["url", "https://www.yelp.com/biz/waipahu-cafe-waipahu?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "94-300 Farrington Hwy"], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.280668"], ["updated_at", "2019-08-24 05:09:02.280668"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Kapolei Golf Club Restaurant"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/eey60ldsjfZ60fVLRqAU0w/o.jpg"], ["category", "Japanese"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/kapolei-golf-club-restaurant-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-701 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kapolei Golf Club Restaurant"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/eey60ldsjfZ60fVLRqAU0w/o.jpg"], ["category", "Japanese"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/kapolei-golf-club-restaurant-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-701 Farrington Hwy"], ["address2", ""], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.283926"], ["updated_at", "2019-08-24 05:09:02.283926"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Applebee's Grill + Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/K2hw6KxD3_zNhvPGNHiWSw/o.jpg"], ["category", "American (Traditional)"], ["rating", 2.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/applebees-grill-bar-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Ste 113"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Applebee's Grill + Bar"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/K2hw6KxD3_zNhvPGNHiWSw/o.jpg"], ["category", "American (Traditional)"], ["rating", 2.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/applebees-grill-bar-kapolei-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Ste 113"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.288074"], ["updated_at", "2019-08-24 05:09:02.288074"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Johnny Rockets"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/lPBJn573mUHPCVogqwTw5g/o.jpg"], ["category", "Diners"], ["rating", 3.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/johnny-rockets-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Unit 700"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Johnny Rockets"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/lPBJn573mUHPCVogqwTw5g/o.jpg"], ["category", "Diners"], ["rating", 3.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/johnny-rockets-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Unit 700"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.292947"], ["updated_at", "2019-08-24 05:09:02.292947"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Dana's Restaurant and Catering"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/BHA5HrQtEtUXnYZRMo53dg/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/danas-restaurant-and-catering-waipahu-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "94-235 Hanawai Cir"], ["address2", ""], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.5ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dana's Restaurant and Catering"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/BHA5HrQtEtUXnYZRMo53dg/o.jpg"], ["category", "American (Traditional)"], ["rating", 3.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/danas-restaurant-and-catering-waipahu-2?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "94-235 Hanawai Cir"], ["address2", ""], ["city", "Waipahu"], ["zip_code", "96797"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.297877"], ["updated_at", "2019-08-24 05:09:02.297877"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "California Pizza Kitchen at Kapolei"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/6F8W7tF_UcFHZUfAAe3lNA/o.jpg"], ["category", "Pizza"], ["rating", 3.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/california-pizza-kitchen-at-kapolei-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Suite 500"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "California Pizza Kitchen at Kapolei"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/6F8W7tF_UcFHZUfAAe3lNA/o.jpg"], ["category", "Pizza"], ["rating", 3.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/california-pizza-kitchen-at-kapolei-kapolei?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-5431 Kapolei Pkwy"], ["address2", "Suite 500"], ["city", "Kapolei"], ["zip_code", "96707"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.302775"], ["updated_at", "2019-08-24 05:09:02.302775"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" IS NULL AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Button Up Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/mFZXpaCeBFfAyIQfjBQSnA/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/button-up-cafe-pearl-city?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "719 Kamehameha Hwy"], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Button Up Cafe"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/mFZXpaCeBFfAyIQfjBQSnA/o.jpg"], ["category", "Breakfast & Brunch"], ["rating", 4.5], ["price", "$$"], ["url", "https://www.yelp.com/biz/button-up-cafe-pearl-city?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "719 Kamehameha Hwy"], ["city", "Pearl City"], ["zip_code", "96782"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.305677"], ["updated_at", "2019-08-24 05:09:02.305677"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = ? AND "businesses"."image_url" = ? AND "businesses"."category" = ? AND "businesses"."rating" = ? AND "businesses"."price" = ? AND "businesses"."url" = ? AND "businesses"."address1" = ? AND "businesses"."address2" = ? AND "businesses"."city" = ? AND "businesses"."zip_code" = ? AND "businesses"."country" = ? AND "businesses"."state" = ? LIMIT ?[0m  [["name", "Bird of Paradise"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/rL_A2BanicIvvzTxym-JcQ/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/bird-of-paradise-ewa-beach?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-1200 Fort Weaver Rd"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "url", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bird of Paradise"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/rL_A2BanicIvvzTxym-JcQ/o.jpg"], ["category", "American (Traditional)"], ["rating", 4.0], ["price", "$$"], ["url", "https://www.yelp.com/biz/bird-of-paradise-ewa-beach?adjust_creative=SGZIuEQLZlPvK_0Fdr6Yyw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SGZIuEQLZlPvK_0Fdr6Yyw"], ["address1", "91-1200 Fort Weaver Rd"], ["address2", ""], ["city", "Ewa Beach"], ["zip_code", "96706"], ["country", "US"], ["state", "HI"], ["created_at", "2019-08-24 05:09:02.308725"], ["updated_at", "2019-08-24 05:09:02.308725"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/fetch_controller.rb:18
+Completed 200 OK in 1446ms (Views: 3.1ms | ActiveRecord: 30.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBusinesses (20190823182004)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image_url" varchar, "category" varchar, "rating" float, "price" varchar, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823182004_create_businesses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823182004"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20190823200604)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "attending_count" integer, "category" varchar, "cost" float, "description" varchar, "image_url" varchar, "interested_count" integer, "is_canceled" boolean, "is_free" boolean, "name" varchar, "time_end" varchar, "time_start" varchar, "address1" varchar, "address2" varchar, "city" varchar, "zip_code" varchar, "country" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823200604_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823200604"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateReviews (20190823201858)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar, "rating" integer, "user_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190823201858_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190823201858"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-24 05:10:13.204898"], ["updated_at", "2019-08-24 05:10:13.204898"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

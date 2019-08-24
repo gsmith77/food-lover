@@ -5,6 +5,7 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
         t.string :image_url
         t.string :category
         t.float :rating
+        t.string :price
         t.string :address1
         t.string :address2
         t.string :city

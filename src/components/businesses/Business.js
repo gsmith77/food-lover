@@ -20,9 +20,12 @@ class Business extends Component {
                     <img style={{align: 'left', width: '500px'}}alt="single business" id={business.name} src={business.image_url}></img>
                     <br/>
                     <section>
+                    Price: {business.price}
+                    <br/>
                     Total Reviews:{business.review_count}
                     <br/>
-                    Categories: { business.categories.map(c => <ul> - {c.title}</ul>)} 
+                    Categories: {business.categories.map(c => <ul> - {c.title}</ul>)} 
+                    <br/>                
                     </section>
                     <br/>
                     <button style={buttonStyle} onClick={this.handleClick}>Reviews</button>

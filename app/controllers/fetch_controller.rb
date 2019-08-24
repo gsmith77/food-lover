@@ -20,6 +20,7 @@ class FetchController < ApplicationController
             image_url: business['image_url'],
             category: business['categories'][0]['title'],
             rating: business['rating'],
+            price: business['price'],
             address1: business['location']['address1'],
             address2: business['location']['address2'],
             city: business['location']['city'],
