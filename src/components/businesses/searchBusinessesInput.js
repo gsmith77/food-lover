@@ -3,8 +3,7 @@ import { fetchBusinesses } from '../../actions/fetchBusinesses'
 import { connect } from 'react-redux'
 const initialState = {
     term: '',
-    location: '',
-    limit: 20
+    location: ''
 }
 
 export class SearchBusinessesInput extends Component {

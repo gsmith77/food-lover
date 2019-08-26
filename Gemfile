@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 gem 'foreman', '~> 0.82.0'
-gem 'faraday'
 gem 'rest-client'
 gem 'json'
 
