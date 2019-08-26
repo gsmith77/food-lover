@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
-import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import SearchBusinessesInput from './components/businesses/searchBusinessesInput';
 import featuredEventInput from './components/featuredEvent/featuredEventInput'
 
@@ -63,12 +63,14 @@ ReactDOM.render(
     <Provider store={store}>
       <App />
       <Router>
-        <Navbar fixed="top" />
-        <div>   
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/search_featured_event" component={featuredEventInput}/>
-          <Route exact path="/search_businesses" component={SearchBusinessesInput}/>
-        </div>     
+        <Switch>
+          <Navbar fixed="top" />
+          <div>   
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/search_featured_event" component={featuredEventInput}/>
+            <Route exact path="/search_businesses" component={SearchBusinessesInput}/>
+          </div>     
+        </Switch>
       </Router>
     </Provider>,
     document.getElementById('root')
