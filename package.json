@@ -18,6 +18,10 @@
     "redux-thunk": "^2.3.0",
     "webpacker": "^4.4.0"
   },
+  "engines": {
+    "npm": "6.10.3",
+    "node": "12.9.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

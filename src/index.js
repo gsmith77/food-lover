@@ -56,8 +56,14 @@ const link = {
     >Search Foods</NavLink>
   </div>;
 
-  const Home = () => <div><h1> Welcome to My Clone of Yelp!</h1> <p> Hurry up and Search something! I am getting hungry!</p></div>
-
+  const Home = () => {
+    return(
+    <div>
+      <h1> Welcome to My Clone of Yelp!</h1> 
+      <p> Hurry up and Search something! I am getting hungry!</p>
+    </div>
+    )
+  }
 
 ReactDOM.render(
     <Provider store={store}>

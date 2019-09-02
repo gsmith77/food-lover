@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 gem 'foreman', '~> 0.82.0'
-gem 'rest-client'
-gem 'json'
+gem 'rest-client', '~> 2.1.0'
+gem 'json', '~> 2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
