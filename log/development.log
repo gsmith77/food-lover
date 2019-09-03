@@ -19889,3 +19889,385 @@ Processing by FetchController#search_businesses as */*
 Completed 200 OK in 1184ms (Views: 2.9ms | ActiveRecord: 7.1ms)
 
 
+  [1m[35m (395.9ms)[0m  [1m[35mCREATE DATABASE "yelp-clone_development" ENCODING = 'unicode'[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (273.9ms)[0m  [1m[35mCREATE DATABASE "yelp-clone_test" ENCODING = 'unicode'[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "businesses" CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" bigserial primary key, "name" character varying, "image_url" character varying, "category" character varying, "rating" float, "price" character varying, "address1" character varying, "address2" character varying, "city" character varying, "zip_code" character varying, "country" character varying, "state" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:31
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "attending_count" integer, "category" character varying, "cost" float, "description" character varying, "image_url" character varying, "interested_count" integer, "is_canceled" boolean, "is_free" boolean, "name" character varying, "time_end" character varying, "time_start" character varying, "address1" character varying, "address2" character varying, "city" character varying, "zip_code" character varying, "country" character varying, "state" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:53
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "text" character varying, "rating" integer, "user_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190823201858)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190823182004),
+(20190823200604);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-03 21:14:15.460711"], ["updated_at", "2019-09-03 21:14:15.460711"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "businesses" CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "businesses" ("id" bigserial primary key, "name" character varying, "image_url" character varying, "category" character varying, "rating" float, "price" character varying, "address1" character varying, "address2" character varying, "city" character varying, "zip_code" character varying, "country" character varying, "state" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:31
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "attending_count" integer, "category" character varying, "cost" float, "description" character varying, "image_url" character varying, "interested_count" integer, "is_canceled" boolean, "is_free" boolean, "name" character varying, "time_end" character varying, "time_start" character varying, "address1" character varying, "address2" character varying, "city" character varying, "zip_code" character varying, "country" character varying, "state" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:53
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "text" character varying, "rating" integer, "user_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190823201858)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190823182004),
+(20190823200604);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-03 21:14:15.535773"], ["updated_at", "2019-09-03 21:14:15.535773"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-09-03 21:14:15.539670"], ["key", "environment"]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE DATABASE "yelp-clone_development" ENCODING = 'unicode'[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "yelp-clone_test" ENCODING = 'unicode'[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1686208058549308350)[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1686208058549308350)[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/bin/rake:23
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2019-09-03 14:15:05 -0700
+Started GET "/%PUBLIC_URL%/favicon.ico" for ::1 at 2019-09-03 14:15:05 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/favicon.ico"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search_events?location=Houston" for 127.0.0.1 at 2019-09-03 14:15:51 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/grantwilliamsmith/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FetchController#search_events as */*
+  Parameters: {"location"=>"Houston"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."attending_count" = $1 AND "events"."category" = $2 AND "events"."cost" IS NULL AND "events"."description" = $3 AND "events"."image_url" = $4 AND "events"."interested_count" = $5 AND "events"."is_canceled" = $6 AND "events"."is_free" = $7 AND "events"."name" = $8 AND "events"."time_end" = $9 AND "events"."time_start" = $10 AND "events"."address1" = $11 AND "events"."address2" = $12 AND "events"."city" = $13 AND "events"."zip_code" = $14 AND "events"."country" = $15 AND "events"."state" = $16 LIMIT $17[0m  [["attending_count", 1], ["category", "nightlife"], ["description", "***********************************************\nPLEASE NOTE:\nThis event is now closed to new RSVPs.\nCatch us again in..."], ["image_url", "https://s3-media3.fl.yelpcdn.com/ephoto/zZQk2tF_tvbVOaiIZOY2OA/o.jpg"], ["interested_count", 525], ["is_canceled", false], ["is_free", true], ["name", "Yelp Presents A Holiday Hoedown - GUEST LIST CLOSED"], ["time_end", "2010-12-09T22:00:00-06:00"], ["time_start", "2010-12-09T19:30:00-06:00"], ["address1", "2101 Winter St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77007"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[36mEvent Create (0.8ms)[0m  [1m[32mINSERT INTO "events" ("attending_count", "category", "description", "image_url", "interested_count", "is_canceled", "is_free", "name", "time_end", "time_start", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["attending_count", 1], ["category", "nightlife"], ["description", "***********************************************\nPLEASE NOTE:\nThis event is now closed to new RSVPs.\nCatch us again in..."], ["image_url", "https://s3-media3.fl.yelpcdn.com/ephoto/zZQk2tF_tvbVOaiIZOY2OA/o.jpg"], ["interested_count", 525], ["is_canceled", false], ["is_free", true], ["name", "Yelp Presents A Holiday Hoedown - GUEST LIST CLOSED"], ["time_end", "2010-12-09T22:00:00-06:00"], ["time_start", "2010-12-09T19:30:00-06:00"], ["address1", "2101 Winter St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77007"], ["country", "US"], ["state", "TX"], ["created_at", "2019-09-03 21:15:52.603939"], ["updated_at", "2019-09-03 21:15:52.603939"]]
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."attending_count" = $1 AND "events"."category" = $2 AND "events"."cost" IS NULL AND "events"."description" = $3 AND "events"."image_url" = $4 AND "events"."interested_count" = $5 AND "events"."is_canceled" = $6 AND "events"."is_free" = $7 AND "events"."name" = $8 AND "events"."time_end" = $9 AND "events"."time_start" = $10 AND "events"."address1" = $11 AND "events"."address2" IS NULL AND "events"."city" = $12 AND "events"."zip_code" = $13 AND "events"."country" = $14 AND "events"."state" = $15 LIMIT $16[0m  [["attending_count", 1], ["category", "nightlife"], ["description", "THE EVENT IS NOW FULL & THE GUEST LIST HAS BEEN CLOSED. Hope to catch you at the next one!\n\n\nIt's time for Yelp Houston's biggest party of the year......"], ["image_url", "https://s3-media1.fl.yelpcdn.com/ephoto/RCKgMJqZGrx0zNdcQHt7gw/o.jpg"], ["interested_count", 605], ["is_canceled", false], ["is_free", true], ["name", "GUEST LIST IS CLOSED/FULL: Yelper Party 2011: Yelp's Flock Party"], ["time_end", "2011-12-01T23:00:00-06:00"], ["time_start", "2011-11-30T20:30:00-06:00"], ["address1", "6200 Hermann Park Dr"], ["city", "Houston"], ["zip_code", "77030"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("attending_count", "category", "description", "image_url", "interested_count", "is_canceled", "is_free", "name", "time_end", "time_start", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17) RETURNING "id"[0m  [["attending_count", 1], ["category", "nightlife"], ["description", "THE EVENT IS NOW FULL & THE GUEST LIST HAS BEEN CLOSED. Hope to catch you at the next one!\n\n\nIt's time for Yelp Houston's biggest party of the year......"], ["image_url", "https://s3-media1.fl.yelpcdn.com/ephoto/RCKgMJqZGrx0zNdcQHt7gw/o.jpg"], ["interested_count", 605], ["is_canceled", false], ["is_free", true], ["name", "GUEST LIST IS CLOSED/FULL: Yelper Party 2011: Yelp's Flock Party"], ["time_end", "2011-12-01T23:00:00-06:00"], ["time_start", "2011-11-30T20:30:00-06:00"], ["address1", "6200 Hermann Park Dr"], ["city", "Houston"], ["zip_code", "77030"], ["country", "US"], ["state", "TX"], ["created_at", "2019-09-03 21:15:52.610326"], ["updated_at", "2019-09-03 21:15:52.610326"]]
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."attending_count" = $1 AND "events"."category" = $2 AND "events"."cost" = $3 AND "events"."description" = $4 AND "events"."image_url" = $5 AND "events"."interested_count" = $6 AND "events"."is_canceled" = $7 AND "events"."is_free" = $8 AND "events"."name" = $9 AND "events"."time_end" = $10 AND "events"."time_start" = $11 AND "events"."address1" = $12 AND "events"."address2" = $13 AND "events"."city" = $14 AND "events"."zip_code" = $15 AND "events"."country" = $16 AND "events"."state" = $17 LIMIT $18[0m  [["attending_count", 1], ["category", "charities"], ["cost", 10.0], ["description", "SORRY - THIS EVENT GUEST LIST IS FULL. Catch you at the next one!\n\n*************************­*****  *************************­*****..."], ["image_url", "https://s3-media3.fl.yelpcdn.com/ephoto/dZGXOI7yWJI599eqcYJuHw/o.jpg"], ["interested_count", 962], ["is_canceled", false], ["is_free", false], ["name", "Pley With Yelp - The Sequel!"], ["time_end", "2014-06-13T23:00:00-05:00"], ["time_start", "2014-06-13T20:00:00-05:00"], ["address1", "1500 Binz St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77004"], ["country", "US"], ["state", "TX"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("attending_count", "category", "cost", "description", "image_url", "interested_count", "is_canceled", "is_free", "name", "time_end", "time_start", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["attending_count", 1], ["category", "charities"], ["cost", 10.0], ["description", "SORRY - THIS EVENT GUEST LIST IS FULL. Catch you at the next one!\n\n*************************­*****  *************************­*****..."], ["image_url", "https://s3-media3.fl.yelpcdn.com/ephoto/dZGXOI7yWJI599eqcYJuHw/o.jpg"], ["interested_count", 962], ["is_canceled", false], ["is_free", false], ["name", "Pley With Yelp - The Sequel!"], ["time_end", "2014-06-13T23:00:00-05:00"], ["time_start", "2014-06-13T20:00:00-05:00"], ["address1", "1500 Binz St"], ["address2", ""], ["city", "Houston"], ["zip_code", "77004"], ["country", "US"], ["state", "TX"], ["created_at", "2019-09-03 21:15:52.618043"], ["updated_at", "2019-09-03 21:15:52.618043"]]
+  ↳ app/controllers/fetch_controller.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:45
+Completed 200 OK in 1101ms (Views: 2.8ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/search_businesses?term=turkey%20burger&location=New%20York" for 127.0.0.1 at 2019-09-03 14:16:08 -0700
+Processing by FetchController#search_businesses as */*
+  Parameters: {"term"=>"turkey burger", "location"=>"New York"}
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "The Local Press"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/NfNKj5zxY9KP8ATujhCEbw/o.jpg"], ["category", "Salad"], ["rating", 4.5], ["price", "$$"], ["address1", "92-15 Rockaway Blvd"], ["address2", ""], ["city", "Ozone Park"], ["zip_code", "11417"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.6ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "The Local Press"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/NfNKj5zxY9KP8ATujhCEbw/o.jpg"], ["category", "Salad"], ["rating", 4.5], ["price", "$$"], ["address1", "92-15 Rockaway Blvd"], ["address2", ""], ["city", "Ozone Park"], ["zip_code", "11417"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.200280"], ["updated_at", "2019-09-03 21:16:09.200280"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" IS NULL AND "businesses"."city" = $7 AND "businesses"."zip_code" = $8 AND "businesses"."country" = $9 AND "businesses"."state" = $10 LIMIT $11[0m  [["name", "Juanchi's Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/8EhYHXH8T_XIopa05GqZmQ/o.jpg"], ["category", "Gastropubs"], ["rating", 4.5], ["price", "$$"], ["address1", "225 S 1st St"], ["city", "Brooklyn"], ["zip_code", "11211"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Juanchi's Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/8EhYHXH8T_XIopa05GqZmQ/o.jpg"], ["category", "Gastropubs"], ["rating", 4.5], ["price", "$$"], ["address1", "225 S 1st St"], ["city", "Brooklyn"], ["zip_code", "11211"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.206529"], ["updated_at", "2019-09-03 21:16:09.206529"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" IS NULL AND "businesses"."city" = $7 AND "businesses"."zip_code" = $8 AND "businesses"."country" = $9 AND "businesses"."state" = $10 LIMIT $11[0m  [["name", "Black Iron Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/031aF7_u0NDBKx2Vmrh4Fw/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "245 W 38th St"], ["city", "New York"], ["zip_code", "10018"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Black Iron Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/031aF7_u0NDBKx2Vmrh4Fw/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "245 W 38th St"], ["city", "New York"], ["zip_code", "10018"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.212942"], ["updated_at", "2019-09-03 21:16:09.212942"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" IS NULL AND "businesses"."city" = $7 AND "businesses"."zip_code" = $8 AND "businesses"."country" = $9 AND "businesses"."state" = $10 LIMIT $11[0m  [["name", "Benson's NYC"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/IRDAMx_lRnwe36Uh0n8ZnA/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["price", "$$"], ["address1", "181 Essex St"], ["city", "New York"], ["zip_code", "10002"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Benson's NYC"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/IRDAMx_lRnwe36Uh0n8ZnA/o.jpg"], ["category", "American (New)"], ["rating", 4.5], ["price", "$$"], ["address1", "181 Essex St"], ["city", "New York"], ["zip_code", "10002"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.218326"], ["updated_at", "2019-09-03 21:16:09.218326"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Burger It Up"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/T0_qXAXNQiQExQfGu4pEVw/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "146 Knickerbocker Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11237"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Burger It Up"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/T0_qXAXNQiQExQfGu4pEVw/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "146 Knickerbocker Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11237"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.222882"], ["updated_at", "2019-09-03 21:16:09.222882"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "The Burgary"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/FpA1w1ikAA1aMKkh9MfaFw/o.jpg"], ["category", "Burgers"], ["rating", 4.5], ["price", "$$"], ["address1", "67 Clinton St"], ["address2", ""], ["city", "New York"], ["zip_code", "10002"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "The Burgary"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/FpA1w1ikAA1aMKkh9MfaFw/o.jpg"], ["category", "Burgers"], ["rating", 4.5], ["price", "$$"], ["address1", "67 Clinton St"], ["address2", ""], ["city", "New York"], ["zip_code", "10002"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.226766"], ["updated_at", "2019-09-03 21:16:09.226766"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Breakroom"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/l-b4gVi5G7xOBQ60QdctVA/o.jpg"], ["category", "Burgers"], ["rating", 4.5], ["price", "$$"], ["address1", "83 Baxter St"], ["address2", ""], ["city", "New York"], ["zip_code", "10013"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Breakroom"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/l-b4gVi5G7xOBQ60QdctVA/o.jpg"], ["category", "Burgers"], ["rating", 4.5], ["price", "$$"], ["address1", "83 Baxter St"], ["address2", ""], ["city", "New York"], ["zip_code", "10013"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.230208"], ["updated_at", "2019-09-03 21:16:09.230208"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" IS NULL AND "businesses"."city" = $7 AND "businesses"."zip_code" = $8 AND "businesses"."country" = $9 AND "businesses"."state" = $10 LIMIT $11[0m  [["name", "212 Burgers"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/vf7JojXIkUr39M4gkGhH4Q/o.jpg"], ["category", "Burgers"], ["rating", 4.5], ["price", "$$"], ["address1", "252 Prospect Park W"], ["city", "Brooklyn"], ["zip_code", "11215"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "212 Burgers"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/vf7JojXIkUr39M4gkGhH4Q/o.jpg"], ["category", "Burgers"], ["rating", 4.5], ["price", "$$"], ["address1", "252 Prospect Park W"], ["city", "Brooklyn"], ["zip_code", "11215"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.234132"], ["updated_at", "2019-09-03 21:16:09.234132"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Paul's Da Burger Joint"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/kmjKE4MRucB0O9jot1bK7g/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "131 2nd Ave"], ["address2", ""], ["city", "New York"], ["zip_code", "10003"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Paul's Da Burger Joint"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/kmjKE4MRucB0O9jot1bK7g/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "131 2nd Ave"], ["address2", ""], ["city", "New York"], ["zip_code", "10003"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.237591"], ["updated_at", "2019-09-03 21:16:09.237591"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Burger Bistro"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/xDKsXM4OX5IIVSh_K4Ht8Q/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "177 5th Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11217"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Burger Bistro"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/xDKsXM4OX5IIVSh_K4Ht8Q/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "177 5th Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11217"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.241010"], ["updated_at", "2019-09-03 21:16:09.241010"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Two 8 Two Bar & Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/AXgXyRScYhFAYaXGtxuq_A/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "282 Atlantic Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11201"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Two 8 Two Bar & Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/AXgXyRScYhFAYaXGtxuq_A/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "282 Atlantic Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11201"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.244662"], ["updated_at", "2019-09-03 21:16:09.244662"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Black Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/qEXAuFvOeMNqe-Hnn8RJRA/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$"], ["address1", "386 Canal St"], ["address2", ""], ["city", "New York"], ["zip_code", "10013"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Black Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/qEXAuFvOeMNqe-Hnn8RJRA/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$"], ["address1", "386 Canal St"], ["address2", ""], ["city", "New York"], ["zip_code", "10013"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.257245"], ["updated_at", "2019-09-03 21:16:09.257245"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Bareburger"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/7Ck7XFiqnOuzbgwkg8U8vA/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "366 W 46th St."], ["address2", ""], ["city", "New York"], ["zip_code", "10036"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Bareburger"], ["image_url", "https://s3-media1.fl.yelpcdn.com/bphoto/7Ck7XFiqnOuzbgwkg8U8vA/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "366 W 46th St."], ["address2", ""], ["city", "New York"], ["zip_code", "10036"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.260336"], ["updated_at", "2019-09-03 21:16:09.260336"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Locksmith Bar"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/9PU7D30VELJzSZqkohIABQ/o.jpg"], ["category", "Wine Bars"], ["rating", 4.0], ["price", "$$"], ["address1", "4463 Broadway"], ["address2", ""], ["city", "New York"], ["zip_code", "10040"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Locksmith Bar"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/9PU7D30VELJzSZqkohIABQ/o.jpg"], ["category", "Wine Bars"], ["rating", 4.0], ["price", "$$"], ["address1", "4463 Broadway"], ["address2", ""], ["city", "New York"], ["zip_code", "10040"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.263439"], ["updated_at", "2019-09-03 21:16:09.263439"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" IS NULL AND "businesses"."address1" = $5 AND "businesses"."address2" IS NULL AND "businesses"."city" = $6 AND "businesses"."zip_code" = $7 AND "businesses"."country" = $8 AND "businesses"."state" = $9 LIMIT $10[0m  [["name", "Elder Greene"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/gWjrufbKtF1EL591WA25Hw/o.jpg"], ["category", "Cocktail Bars"], ["rating", 4.0], ["address1", "160 Franklin St"], ["city", "Brooklyn"], ["zip_code", "11222"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Elder Greene"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/gWjrufbKtF1EL591WA25Hw/o.jpg"], ["category", "Cocktail Bars"], ["rating", 4.0], ["address1", "160 Franklin St"], ["city", "Brooklyn"], ["zip_code", "11222"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.267222"], ["updated_at", "2019-09-03 21:16:09.267222"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" IS NULL AND "businesses"."address1" = $5 AND "businesses"."address2" = $6 AND "businesses"."city" = $7 AND "businesses"."zip_code" = $8 AND "businesses"."country" = $9 AND "businesses"."state" = $10 LIMIT $11[0m  [["name", "Burgerim"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/y1wk-Op4tep1HTV4_b0gUw/o.jpg"], ["category", "Burgers"], ["rating", 3.5], ["address1", "162-16 Union Tpke"], ["address2", "corner of 164 street & union TPKE"], ["city", "Fresh Meadows"], ["zip_code", "11366"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Burgerim"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/y1wk-Op4tep1HTV4_b0gUw/o.jpg"], ["category", "Burgers"], ["rating", 3.5], ["address1", "162-16 Union Tpke"], ["address2", "corner of 164 street & union TPKE"], ["city", "Fresh Meadows"], ["zip_code", "11366"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.270893"], ["updated_at", "2019-09-03 21:16:09.270893"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Milk Burger"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/YaTL6ZVYzQ8i0hFHCZW1dQ/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "148 Bruckner Blvd"], ["address2", ""], ["city", "Bronx"], ["zip_code", "10454"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Milk Burger"], ["image_url", "https://s3-media4.fl.yelpcdn.com/bphoto/YaTL6ZVYzQ8i0hFHCZW1dQ/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "148 Bruckner Blvd"], ["address2", ""], ["city", "Bronx"], ["zip_code", "10454"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.274216"], ["updated_at", "2019-09-03 21:16:09.274216"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Moo Burger"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/7yEdWCCf3VowUoW0G3kDFQ/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "240 Court St"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11201"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Moo Burger"], ["image_url", "https://s3-media3.fl.yelpcdn.com/bphoto/7yEdWCCf3VowUoW0G3kDFQ/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "240 Court St"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11201"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.277462"], ["updated_at", "2019-09-03 21:16:09.277462"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "Emoji Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/7KcF_jZJzJG2mikxFCZerA/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "80-07 37th Ave"], ["address2", ""], ["city", "Jackson Heights"], ["zip_code", "11372"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Emoji Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/7KcF_jZJzJG2mikxFCZerA/o.jpg"], ["category", "Burgers"], ["rating", 4.0], ["price", "$$"], ["address1", "80-07 37th Ave"], ["address2", ""], ["city", "Jackson Heights"], ["zip_code", "11372"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.280764"], ["updated_at", "2019-09-03 21:16:09.280764"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."name" = $1 AND "businesses"."image_url" = $2 AND "businesses"."category" = $3 AND "businesses"."rating" = $4 AND "businesses"."price" = $5 AND "businesses"."address1" = $6 AND "businesses"."address2" = $7 AND "businesses"."city" = $8 AND "businesses"."zip_code" = $9 AND "businesses"."country" = $10 AND "businesses"."state" = $11 LIMIT $12[0m  [["name", "DuMont Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/gWJ_5JwiKjAjvE4mAPtxCg/o.jpg"], ["category", "Burgers"], ["rating", 3.5], ["price", "$$"], ["address1", "314 Bedford Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11211"], ["country", "US"], ["state", "NY"], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[36mBusiness Create (0.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "image_url", "category", "rating", "price", "address1", "address2", "city", "zip_code", "country", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "DuMont Burger"], ["image_url", "https://s3-media2.fl.yelpcdn.com/bphoto/gWJ_5JwiKjAjvE4mAPtxCg/o.jpg"], ["category", "Burgers"], ["rating", 3.5], ["price", "$$"], ["address1", "314 Bedford Ave"], ["address2", ""], ["city", "Brooklyn"], ["zip_code", "11211"], ["country", "US"], ["state", "NY"], ["created_at", "2019-09-03 21:16:09.284172"], ["updated_at", "2019-09-03 21:16:09.284172"]]
+  ↳ app/controllers/fetch_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fetch_controller.rb:18
+Completed 200 OK in 955ms (Views: 2.8ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/business_reviews?id=KrbzIWxERBbQ6BCpSV-9og" for 127.0.0.1 at 2019-09-03 14:16:11 -0700
+Processing by FetchController#business_reviews as */*
+  Parameters: {"id"=>"KrbzIWxERBbQ6BCpSV-9og"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."text" = $1 AND "reviews"."rating" = $2 AND "reviews"."user_name" = $3 LIMIT $4[0m  [["text", "I loved this place. I just found it on a whim and it became a lucky day. \n\nWho ever made the french fries today on 7/24/2019 at 4:50 is a french fry..."], ["rating", 5], ["user_name", "Jessica R."], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."text" = $1 AND "reviews"."rating" = $2 AND "reviews"."user_name" = $3 LIMIT $4[0m  [["text", "The customers service at this place is wonderful. The server was polite and helped us answer some menu questions. They were playing the best jams (90s hip..."], ["rating", 3], ["user_name", "Chris G."], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."text" = $1 AND "reviews"."rating" = $2 AND "reviews"."user_name" = $3 LIMIT $4[0m  [["text", "It has a decent setup inside.food fairly priced. For appetizers i had buttermilk chicken tenders. Oddly for an appetizer it came with French Fries.(Advice:..."], ["rating", 4], ["user_name", "Ceasar N."], ["LIMIT", 1]]
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fetch_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/fetch_controller.rb:79
+Completed 200 OK in 436ms (Views: 0.3ms | ActiveRecord: 6.6ms)
+
+
