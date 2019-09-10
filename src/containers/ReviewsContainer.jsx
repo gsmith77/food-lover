@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Reviews from '../components/reviews/Reviews'
 import { connect } from 'react-redux'
-import AddReviewInput from '../components/reviews/addReviewInput'
+// import AddReviewInput from '../components/reviews/addReviewInput'
 
 
 
@@ -12,7 +12,7 @@ class ReviewsContainer extends Component {
             <div>
                 <ol id="allReviews" style={{borderTop: "3px solid rgb(100, 100, 100)",borderBottom: "3px solid rgb(100, 100, 100)"}}>
                     <Reviews business={this.props.business} reviews={this.props.reviews} />
-                    <AddReviewInput />
+                    {/* <AddReviewInput /> */}
                 </ol>
             </div>
         )

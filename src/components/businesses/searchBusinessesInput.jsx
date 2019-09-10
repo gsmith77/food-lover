@@ -23,9 +23,7 @@ export class SearchBusinessesInput extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log('A');
         this.props.fetchBusinesses(this.state)
-        console.log('B');
         this.setState(initialState)
     }
 

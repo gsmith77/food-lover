@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/search_businesses', to: 'fetch#search_businesses'
   get '/search_events', to: 'fetch#search_events'
   get '/business_reviews', to: 'fetch#business_reviews'
+  
 end

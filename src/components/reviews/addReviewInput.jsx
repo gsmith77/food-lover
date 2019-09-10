@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
+import {postReview} from '../../actions/postReview'
 
 export default class AddReviewInput extends Component {
     constructor(){
         super()
         this.state = {
-          text:'',
-          inputs: []
+          text:''
         }
       }
   
@@ -17,8 +17,9 @@ export default class AddReviewInput extends Component {
   
       handleSubmit = (event) => {
         event.preventDefault()
+        postReview(this.state.text)
         this.setState({
-          inputs: [...this.state.inputs, this.state.text]
+          text: ''
         })
       }
       
@@ -26,13 +27,10 @@ export default class AddReviewInput extends Component {
         return(
         <React.Fragment>
           <form onSubmit={this.handleSubmit}>
-            <label>Leave Review</label>
+          <label>Leave Review</label>
           <input type="text" name="text" value={this.state.text} onChange={this.handleChange}/>
           <input type="submit" value="Add Review"/>
           </form>
-          <ul>
-            {this.state.inputs.map(input => <li >{input}</li>)}
-          </ul>
         </React.Fragment>
         )
       }

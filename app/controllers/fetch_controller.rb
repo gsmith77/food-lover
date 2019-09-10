@@ -1,5 +1,5 @@
 require 'pry'
-require "json"
+require 'json'
 require 'rest-client' 
 class FetchController < ApplicationController
 
