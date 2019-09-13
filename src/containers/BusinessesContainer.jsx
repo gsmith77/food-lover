@@ -7,7 +7,7 @@ class BusinessesContainer extends Component {
 
     render(){
         return(
-            <div id="businesses">
+            <div id="businesses" style={{display: 'inline-block'}}>
                 <Businesses businesses={this.props.businesses} fetchReviews={this.props.fetchReviews}/>
             </div>
         )
