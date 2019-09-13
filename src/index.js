@@ -69,7 +69,7 @@ ReactDOM.render(
     <Provider store={store}>
       <App />
       <Router>
-          <Navbar fixed="top" />
+          <Navbar />
           <div>   
             <Route exact path="/" component={Home}/>
             <Route exact path="/search_featured_event" component={featuredEventInput}/>

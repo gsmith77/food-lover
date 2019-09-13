@@ -7,7 +7,7 @@ class BusinessesContainer extends Component {
 
     render(){
         return(
-            <div>
+            <div id="businesses">
                 <Businesses businesses={this.props.businesses} fetchReviews={this.props.fetchReviews}/>
             </div>
         )
