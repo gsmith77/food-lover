@@ -10,7 +10,8 @@ import rootReducer from './reducers/index';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 import SearchBusinessesInput from './components/businesses/searchBusinessesInput';
 import featuredEventInput from './components/featuredEvent/featuredEventInput'
-
+import Signup from './components/users/Signup'
+import Login from './components/users/Login'
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
@@ -33,6 +34,7 @@ const link = {
       exact
       /* add styling to Navlink */
       style={link}
+      
       /* add prop for activeStyle */
       activeStyle={{
         background: 'red'
@@ -66,6 +68,7 @@ const link = {
   }
 
 ReactDOM.render(
+  
     <Provider store={store}>
       <App />
       <Router>
@@ -74,6 +77,8 @@ ReactDOM.render(
             <Route exact path="/" component={Home}/>
             <Route exact path="/search_featured_event" component={featuredEventInput}/>
             <Route exact path="/search_businesses" component={SearchBusinessesInput}/>
+            <Route exact path="/signup" component={Signup}/>
+            <Route exact path="/login" component={Login}/>
           </div>     
       </Router>
     </Provider>,

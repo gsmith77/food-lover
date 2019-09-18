@@ -32,7 +32,7 @@ export class SearchBusinessesInput extends Component {
 
         return(
      
-            <div class="input" >
+            <div className="input">
                 <form onSubmit={this.handleSubmit} id="search-businesses-input">
                     <label>What Are You Looking For?</label>
                     <input type="text" name="term" value={this.state.term} onChange={this.handleChange}/>

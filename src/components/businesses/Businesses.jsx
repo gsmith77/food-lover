@@ -12,7 +12,7 @@ export default class Businesses extends Component {
 
         return (
             <div>
-                <ol>
+                <ol id="list-of-businesses" style={{margin: 10}}>
                     {generateBusinesses()}
                 </ol>
             </div>

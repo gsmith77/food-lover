@@ -8,7 +8,7 @@ class FeaturedEventContainer extends Component{
     render(){
         return(
             <div>
-                <ol>
+                <ol id="list-of-events">
                     <FeaturedEvents events={this.props.events}/>
                 </ol>
             </div>
