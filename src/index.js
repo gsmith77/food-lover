@@ -6,7 +6,7 @@ import { createStore, applyMiddleware} from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import * as serviceWorker from './serviceWorker';
-import rootReducer from './reducers/index';
+import rootReducer from './reducers/combineReducers';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 import SearchBusinessesInput from './components/businesses/searchBusinessesInput';
 import featuredEventInput from './components/featuredEvent/featuredEventInput'
