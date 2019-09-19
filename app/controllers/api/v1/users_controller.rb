@@ -2,8 +2,6 @@ module Api
     module V1
         class UsersController < ApplicationController
 
-            before_action :authenticate_user!, only: [:show]
-
             def create
                 #check password to password_confirmation
                 #find or create by since the user could exist
@@ -14,7 +12,7 @@ module Api
                 else
                     @user = User.new(user_params)
                     if @user.save
-                        binding.pry
+                        #remember_token is good for two weeks of remembering user for future reference                        
                         @user.remember_me!
                         render json: @user
                     else
@@ -25,7 +23,9 @@ module Api
 
             def show
                 params_for_user = JSON.parse(params['id'])['user']
-                @user = User.find_by(email: params_for_user['email'])
+                #have to manually add .com since it see com as a format instead of part of the email
+                params_for_user_email = params_for_user['email'] + '.com'
+                @user = User.find_by(email: params_for_user_email)
                 if @user
                     render json: @user
                 else

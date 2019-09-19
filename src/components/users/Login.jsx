@@ -23,7 +23,7 @@ class Login extends Component {
     event.preventDefault()
     this.props.loginUser(this.state)
     this.setState({
-        username:'',
+        email:'',
         password: ''
     })
   }
