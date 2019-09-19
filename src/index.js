@@ -12,6 +12,7 @@ import SearchBusinessesInput from './components/businesses/searchBusinessesInput
 import featuredEventInput from './components/featuredEvent/featuredEventInput'
 import Signup from './components/users/Signup'
 import Login from './components/users/Login'
+import {connect} from 'react-redux'
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
@@ -56,7 +57,33 @@ const link = {
         background: 'red'
       }}
     >Search Foods</NavLink>
-  </div>;
+    {currentUser !== null ?
+    <React.Fragment>
+        <NavLink
+        to="/signup"
+        exact
+        style={link}
+        activeStyle={{
+          background: 'red'
+        }}
+        >Sign Up</NavLink> 
+        <NavLink
+        to="/login"
+        exact
+        style={link}
+        activeStyle={{
+          background: 'red'
+        }}
+        >Log In</NavLink>
+      </React.Fragment>
+      : 
+      <React.Fragment>
+        <NavLink
+        >{currentUser}</NavLink>
+      </React.Fragment>
+    }
+
+  </div>
 
   const Home = () => {
     return(
@@ -67,9 +94,25 @@ const link = {
     )
   }
 
+  const mapStateToProps = (state) => {
+    debugger
+    return{
+      currentUser: state.user.currentUser
+    }
+  }
+
+  const currentUser = connect(mapStateToProps)(({ currentUser }) => (
+    <div>
+      {console.log(currentUser)}
+        {currentUser.email}
+      </div>
+    )
+  )
+
 ReactDOM.render(
   
     <Provider store={store}>
+      {console.log(store)}
       <App />
       <Router>
           <Navbar />
@@ -84,6 +127,7 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
+
 
 
 

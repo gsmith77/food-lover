@@ -50,7 +50,7 @@ class Login extends Component {
           onChange={this.handleChange}
           /><br/>
 
-        <input type='submit'/>
+        <input type='submit' value='Log In'/>
       </form>
     )
   }
