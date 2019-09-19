@@ -12,7 +12,15 @@ export const createUser = user => {
       .then(data => {
         if(data.message){
           //display error message from invalid user
-          debugger
+          if(data.message.email && data.message.password){
+            alert(`Email & Password ${data.message.password[0]}`)
+          }
+          else if (data.message.email){
+            alert(`Email ${data.message.email[0]}`)
+          }
+          else if(data.message.password){
+            alert(`Password ${data.message.password[0]}`)
+          }
         }
         else{
           //dispatch to reducer storing the user in currentUser:{} inside of state object

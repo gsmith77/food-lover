@@ -6,7 +6,7 @@ class Signup extends Component {
     constructor(){
         super()
         this.state = {
-          username: "",
+          email: "",
           password: ""
         }
     }
@@ -21,9 +21,9 @@ class Signup extends Component {
     event.preventDefault()
     this.props.createUser(this.state)
     this.setState({
-        username: '',
-        password: ''
-      });
+      email: '',
+      password: ''
+    });
   }
 
   render() {
@@ -31,11 +31,11 @@ class Signup extends Component {
       <form onSubmit={this.handleSubmit}>
         <h1>Sign Up For An Account</h1>
 
-        <label>Username</label>
+        <label>Email</label>
         <input
-          name='username'
-          placeholder='Username'
-          value={this.state.username}
+          name='email'
+          placeholder='Email'
+          value={this.state.email}
           onChange={this.handleChange}
           /><br/>
 

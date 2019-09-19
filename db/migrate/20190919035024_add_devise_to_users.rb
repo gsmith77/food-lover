@@ -12,6 +12,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
       t.datetime :reset_password_sent_at
 
       ## Rememberable
+      t.string :remember_token
       t.datetime :remember_created_at
 
       ## Trackable
