@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       
       resources :review
       resources :users
+      get '/logout', to: 'users#logout'
     end
   end
 
