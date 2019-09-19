@@ -1,26 +1,25 @@
 import React from 'react'
+import {logOutUser} from '../../actions/logOutUser'
+import {connect} from 'react-redux'
 
-export default class User extends React.Component{
+class User extends React.Component{
 
-    logOut = (currentUserId) => {
-        //use dispatch and place this insince of an action
-        return fetch(`http://localhost/api/v1/logout?${currentUserId}`)
-        .then(resp => resp.json())
-        .then(data => {
-            debugger
-            alert(data.message)
-        })
-    }
     render(){
         const currentUser = this.props.currentUser
-        return(
-            <div id="userShowPage">
-                <h1>{currentUser.email}</h1>
-                {"\n"}
-                <button onClick={() => this.logOut(currentUser.id)}>Log Out</button>
-            </div>
-        )
+        if (currentUser !== null){
+            return(
+                <div id="userShowPage">
+                    <h1>{currentUser.email}</h1>
+                    {"\n"}
+                    <button onClick={() => this.props.logOutUser(currentUser.id)}>Log Out</button>
+                </div>
+            )
+        }
+        else{
+            return null
+        }
     }
 }
 
+export default connect(null, {logOutUser})(User)
 

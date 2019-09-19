@@ -6,14 +6,12 @@ import {connect} from 'react-redux'
 
 export class App extends Component{
 
-
   render(){
-
     return (
       <div className="App">
         <BusinessesContainer />
         <FeaturedEventContainer />
-        {this.props.currentUser ? <User currentUser={this.props.currentUser}/> : null}
+        {this.props.currentUser !== null ? <User currentUser={this.props.currentUser}/> : null}
       </div>
     );
   }
