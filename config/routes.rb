@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       get '/search_events', to: 'fetch#search_events'
       get '/business_reviews', to: 'fetch#business_reviews'
       
-      resources :review
+      resources :reviews
       resources :users
       get '/logout', to: 'users#logout'
     end

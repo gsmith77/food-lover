@@ -1,38 +1,51 @@
 import React, {Component} from 'react'
 import {postReview} from '../../actions/postReview'
+import { connect } from 'react-redux';
+import NumericInput from 'react-numeric-input';
 
-export default class AddReviewInput extends Component {
-    constructor(){
-        super()
-        this.state = {
-          text:''
-        }
+class AddReviewInput extends Component {
+  constructor(){
+      super()
+      this.state = {
+        text:'',
+        rating: 1
       }
-  
-      handleChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-      }
-  
-      handleSubmit = (event) => {
-        event.preventDefault()
-        postReview(this.state.text)
-        this.setState({
-          text: ''
-        })
-      }
-      
-      render(){
-        return(
-        <React.Fragment>
-          <form onSubmit={this.handleSubmit}>
+    }
+
+    handleChange = (event) => {
+      this.setState({
+          [event.target.name]: event.target.value
+      })
+    }
+
+    changeRating = (newRating) => {
+      this.setState({
+        rating: newRating
+      })
+    }
+
+    handleSubmit = (event) => {
+      event.preventDefault()
+      //grab currentuser from localstorage
+      this.props.postReview(this.state, localStorage.currentUser)
+      this.setState({
+        text: '',
+        rating: 1
+      })
+    }
+    
+    render(){
+      return(
+      <React.Fragment>
+        <form onSubmit={this.handleSubmit}>
           <label>Leave Review</label>
           <input type="text" name="text" value={this.state.text} onChange={this.handleChange}/>
+          <NumericInput min={1} max={5} name="rating" value={this.state.rating} onChange={this.changeRating}/>
           <input type="submit" value="Add Review"/>
-          </form>
-        </React.Fragment>
-        )
-      }
-  
+        </form>
+      </React.Fragment>
+      )
+    }
 }
+
+export default connect(null, {postReview})(AddReviewInput)

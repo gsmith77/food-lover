@@ -5,8 +5,9 @@ module Api
             def create
                 #check password to password_confirmation
                 #find or create by since the user could exist
-                #check if passwords are same then check if there is a user already in database
+                #check if passwords are same then check if there is a user already in database      
                 @user = User.find_by(email: user_params['email'])
+                @user.remember_me!
                 if @user 
                     render json: @user
                 else
@@ -41,7 +42,7 @@ module Api
             private
 
             def user_params
-                params.require(:user).permit(:email, :password)
+                params.require(:user).permit(:first_name, :last_name, :email, :password)
             end
         end
     end

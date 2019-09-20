@@ -6,6 +6,8 @@ class Signup extends Component {
     constructor(){
         super()
         this.state = {
+          first_name: '',
+          last_name: '',
           email: "",
           password: ""
         }
@@ -21,6 +23,8 @@ class Signup extends Component {
     event.preventDefault()
     this.props.createUser(this.state)
     this.setState({
+      first_name: '',
+      last_name: '',
       email: '',
       password: ''
     });
@@ -30,6 +34,22 @@ class Signup extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <h1>Sign Up For An Account</h1>
+
+        <label>First Name</label>
+        <input
+          name='first_name'
+          placeholder='First Name'
+          value={this.state.first_name}
+          onChange={this.handleChange}
+          /><br/>
+
+        <label>Last Name</label>
+        <input
+          name='last_name'
+          placeholder='Last Name'
+          value={this.state.last_name}
+          onChange={this.handleChange}
+          /><br/>
 
         <label>Email</label>
         <input

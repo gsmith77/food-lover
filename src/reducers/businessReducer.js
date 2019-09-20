@@ -6,6 +6,7 @@ export default function businessReducer(state = {loading: false, businesses: [],
             return Object.assign({}, {...state}, {loading: true})
 
         case 'FETCH_BUSINESSES':
+            
             return {...state, businesses: [...state.businesses, action.payload].flat(), loading: false}
 
         //REVIEWSREDUCER

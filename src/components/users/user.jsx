@@ -4,6 +4,11 @@ import {connect} from 'react-redux'
 
 class User extends React.Component{
 
+    logout = (currentUserId) => {
+        localStorage.removeItem("currentUser")
+        this.props.logOutUser(currentUserId)
+    }
+
     render(){
         const currentUser = this.props.currentUser
         if (currentUser !== null){
@@ -11,7 +16,7 @@ class User extends React.Component{
                 <div id="userShowPage">
                     <h1>{currentUser.email}</h1>
                     {"\n"}
-                    <button onClick={() => this.props.logOutUser(currentUser.id)}>Log Out</button>
+                    <button onClick={() => this.logout(currentUser.id)}>Log Out</button>
                 </div>
             )
         }

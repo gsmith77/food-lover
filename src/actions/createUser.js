@@ -23,6 +23,8 @@ export const createUser = user => {
           }
         }
         else{
+          //put currentUser in localStorage to have access across app
+          localStorage.setItem("currentUser", JSON.stringify(data))
           //dispatch to reducer storing the user in currentUser:{} inside of state object
           dispatch({type:'LOGIN_USER', payload: data})
         }

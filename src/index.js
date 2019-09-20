@@ -15,8 +15,6 @@ import Login from './components/users/Login'
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
-// let currentUser = store.getState().user.currentUser
-
 const link = {
     width: '100px',
     padding: '12px',
@@ -58,7 +56,6 @@ const link = {
         background: 'red'
       }}
     >Search Foods</NavLink>
-    <React.Fragment>
         <NavLink
         to="/signup"
         exact
@@ -75,7 +72,6 @@ const link = {
           background: 'red'
         }}
         >Log In</NavLink>
-      </React.Fragment>
 </div>
   
   const Home = () => {
@@ -88,7 +84,6 @@ const link = {
   }
 
 ReactDOM.render(
-  
     <Provider store={store}>
       <App />
       <Router>

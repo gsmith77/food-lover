@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {loginUser} from '../../actions/loginUser';
-import FacebookLogin from 'react-facebook-login';
 
 class Login extends Component {
     constructor(){
@@ -12,7 +11,6 @@ class Login extends Component {
         }
 
     }
-
 
   handleChange = event => {
     this.setState({
@@ -30,12 +28,6 @@ class Login extends Component {
   }
 
   render() {
-    const responseFacebook = (response) => {
-      //do something with the response
-      //e.g. create a user with these credentials then display user on page
-      console.log(response);
-    }
-
     return (
       <React.Fragment>
       <form onSubmit={this.handleSubmit}>
@@ -60,14 +52,6 @@ class Login extends Component {
 
         <input type='submit' value='Log In'/>
       </form>
-      <FacebookLogin
-        appId="541544013054395"
-        autoLoad={true}
-        fields="name,email,picture"
-        callback={responseFacebook}
-        cssClass="my-facebook-button-class"
-      />
-
       </React.Fragment>
     )
   }
