@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 2019_09_19_035024) do
     t.string "text"
     t.integer "rating"
     t.string "user_name"
+    t.integer "business_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

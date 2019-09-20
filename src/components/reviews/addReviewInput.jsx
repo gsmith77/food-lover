@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 import NumericInput from 'react-numeric-input';
 
 class AddReviewInput extends Component {
-  constructor(){
-      super()
+  constructor(props){
+      super(props)
       this.state = {
         text:'',
-        rating: 1
+        rating: 1,
+        business: this.props.business
       }
     }
 
@@ -27,7 +28,7 @@ class AddReviewInput extends Component {
     handleSubmit = (event) => {
       event.preventDefault()
       //grab currentuser from localstorage
-      this.props.postReview(this.state, localStorage.currentUser)
+      this.props.postReview(this.state)
       this.setState({
         text: '',
         rating: 1

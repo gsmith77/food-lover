@@ -1,6 +1,8 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import AddReviewInput from './addReviewInput';
+import { connect } from 'react-redux';
 
-export default class Reviews extends Component {
+class Reviews extends Component {
 
     render(){
         const thisBusinessesReviews = () => {
@@ -26,12 +28,20 @@ export default class Reviews extends Component {
         }
 
 
-
            return(
-                <div id="listOfReviews">
+                <div id="reviews">
                     {renderReviews()}
+                    <AddReviewInput business={this.props.business}/>
                 </div>
            )
 
     }
 }
+
+const mapStateToProps = state => {
+    return{
+        businesses: state.businesses.businesses
+    }
+}
+
+export default connect(mapStateToProps)(Reviews);
