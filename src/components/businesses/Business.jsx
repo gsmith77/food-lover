@@ -5,7 +5,7 @@ class Business extends Component {
 
     handleClick = (event) => {
         event.preventDefault()
-        this.props.fetchReviews({id: this.props.business.id})
+        this.props.fetchReviews({id: this.props.business.id, name: this.props.business.name})
     }
     render(){
         const buttonStyle ={padding: '15px 32px',

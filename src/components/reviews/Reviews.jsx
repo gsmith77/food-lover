@@ -12,10 +12,11 @@ class Reviews extends Component {
 
         const renderReviews = () => {
             return thisBusinessesReviews().map(review => {
+                debugger
                     return(
                         <React.Fragment>
                             <li style={{width: '300px'}} key={review.id}>
-                                <h4>{review.user.name}</h4>
+                                <h4>{review.user ? review.user.name : review.user_name}</h4>
                                 {"\n"}
                                 <p>Rating: {review.rating}</p>
                                 {"\n"}

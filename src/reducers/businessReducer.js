@@ -17,7 +17,8 @@ export default function businessReducer(state = {loading: false, businesses: [],
 
         case 'FETCH_REVIEWS':
             const newReviews= action.payload[0].map(review => {
-            return(review = {...review, businessId: action.payload[1] })})
+                return(review = {...review, businessId: action.payload[1] })
+            })
             return {...state, reviews: [...state.reviews, newReviews].flat(), loading:false} 
 
         default:

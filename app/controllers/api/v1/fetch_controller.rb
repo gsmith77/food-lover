@@ -69,22 +69,30 @@ module Api
 
             
             def business_reviews
-            id = params[:id]
-            response = RestClient::Request.execute(
-                method: 'GET',
-                url: "https://api.yelp.com/v3/businesses/#{id}/reviews",
-                headers: {Authorization: "Bearer #{ENV["YELP_API_KEY"]}"}
-            )
-            results = JSON.parse(response)
-            reviews = results['reviews']
-            send_reviews_to_database = reviews.each do |review|
-                Review.find_or_create_by(
-                text: review['text'],
-                rating: review['rating'],
-                user_name: review['user']['name']
+                id = params[:id]
+                response = RestClient::Request.execute(
+                    method: 'GET',
+                    url: "https://api.yelp.com/v3/businesses/#{id}/reviews",
+                    headers: {Authorization: "Bearer #{ENV["YELP_API_KEY"]}"}
                 )
-            end
-            render json: reviews
+                results = JSON.parse(response)
+                if params['andSign']
+                    andSign = "&"
+                    biz_name = params['firstHalf'] + andSign + params['secondHalf']
+                    biz = Business.find_by(name: biz_name)
+                else
+                    biz = Business.find_by(name: params['name'])
+                end
+                #try and find your review for this business with the business id
+                reviews = results['reviews']
+                send_reviews_to_database = reviews.each do |review|
+                    Review.find_or_create_by(
+                    text: review['text'],
+                    rating: review['rating'],
+                    user_name: review['user']['name']
+                    )
+                end
+                render json: biz.reviews + reviews
             end
         end
     end
