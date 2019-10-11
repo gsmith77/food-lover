@@ -3,11 +3,23 @@
     float: left;
 }
 
-.location-label {
-    padding: 270px 0 0 310px;
-}
-
 .zipcode-label {
     font-weight: 400;
     font-size: 21pt;
+}
+
+.location-label {
+    padding: 270px 0 0 210px;
+    font-weight: 400;
+    font-size: 21pt;
+}
+
+.location-inputbox {
+    font-size: 14pt;
+}
+
+.submit-button {
+    width: 120px;
+    margin-left: 30px;
+    font-size: 18pt;
 }

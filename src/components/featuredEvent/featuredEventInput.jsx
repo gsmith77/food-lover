@@ -33,8 +33,8 @@ export class featuredEventInput extends Component {
                     <br/>
                     <br/>
                     <label className="location-label">Location:</label>
-                    <input type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
-                    <input type="submit"/>
+                    <input className="location-inputbox"type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
+                    <input className="submit-button" type="submit"/>
                 </form>
             </div>
         )

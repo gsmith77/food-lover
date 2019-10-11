@@ -39,7 +39,6 @@ export class SearchBusinessesInput extends Component {
                     <br/>
                     <h2 className="location-header">Location:</h2>
                     <input className="location-inputbox" type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
-                    <br/>
                     <input className="submit-button" type="submit"/>
                 </form>
             </div>
