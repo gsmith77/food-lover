@@ -77,8 +77,8 @@ const link = {
   const Home = () => {
     return(
     <div className="home-page">
-      <h1> Welcome to My Clone of Yelp!</h1> 
-      <p> Hurry up and Search something! I am getting hungry!</p>
+      <h1 className="home-h1"> Welcome to My Clone of Yelp!</h1> 
+      <h3 className="subtitle-h3"> Hurry up and Search something! I am getting hungry!</h3>
     </div>
     )
   }
