@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+* {
+  font-family: 'Times New Roman', Times, serif 
+}
+
 .home-page {
   padding: 270px 0 0 510px;
 }

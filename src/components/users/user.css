@@ -1,0 +1,12 @@
+.signup-form, .login-form {
+    text-align: center;
+    padding: 200px;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+}
+
+.login-header {
+    font-size: 50pt;
+    font-weight: 50;
+}

@@ -34,6 +34,7 @@ export class SearchBusinessesInput extends Component {
      
             <div className="input">
                 <form onSubmit={this.handleSubmit} id="search-businesses-input">
+                    <h1> PUT A TITLE HERE FOR SEARCHING FOODS</h1>
                     <h2 className="looking-for-header">What Are You Looking For?</h2>
                     <input className="looking-for-inputbox" type="text" name="term" value={this.state.term} onChange={this.handleChange}/>
                     <br/>
