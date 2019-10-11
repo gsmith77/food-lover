@@ -1,20 +1,29 @@
 .input{
-    padding: 270px 0 0 465px;
+    text-align: center;
+    padding: 230px;
+    top: 50%;
+    left: 50%;
+}
+
+.search-businesses-input {
+    display: inline-block;
 }
 
 .looking-for-header {
+    margin-left: 5%;
     font-weight: 400;
     font-size: 21pt;
     float: left;
 }
 
 .looking-for-inputbox {
-    margin-left: 14px;
+    margin-left: 4%;
     margin-top: 29px; 
     font-size: 14pt;
 }
 
 .location-header {
+    margin-left: 5%;
     font-weight: 400;
     font-size: 21pt;
     clear: both;
@@ -22,14 +31,16 @@
 }
 
 .location-inputbox {
-    margin-top: 55px;
-    margin-left: 15px;
+    text-align: center;
+    margin-top: 4%;
+    margin-left: 4%;
     font-size: 14pt;
+    clear: both;
 }
 
 .submit-button {
-    margin-left: 200px;
-    margin-top: 20px;
+    /* display: inline-block; */
+    margin-right: -41%;
+    margin-left: 220px;
     width: 120px;
-    clear: both;
 }

@@ -33,13 +33,16 @@ export class SearchBusinessesInput extends Component {
         return(
      
             <div className="input">
-                <form onSubmit={this.handleSubmit} id="search-businesses-input">
+                <form onSubmit={this.handleSubmit} className="search-businesses-input">
                     <h1> PUT A TITLE HERE FOR SEARCHING FOODS</h1>
                     <h2 className="looking-for-header">What Are You Looking For?</h2>
                     <input className="looking-for-inputbox" type="text" name="term" value={this.state.term} onChange={this.handleChange}/>
                     <br/>
                     <h2 className="location-header">Location:</h2>
                     <input className="location-inputbox" type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
+                    <br/>
+                    <br/>
+                    <br/>
                     <input className="submit-button" type="submit"/>
                 </form>
             </div>

@@ -1,5 +1,8 @@
 .event-input-form {
-    padding: 270px 50px 50px 320px;
+    padding: 270px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
     float: left;
 }
 
@@ -9,7 +12,8 @@
 }
 
 .location-label {
-    padding: 270px 0 0 210px;
+    /* padding: 270px 0 0 210px; */
+    text-align: center;
     font-weight: 400;
     font-size: 21pt;
 }
@@ -20,6 +24,5 @@
 
 .submit-button {
     width: 120px;
-    margin-left: 30px;
     font-size: 18pt;
 }
