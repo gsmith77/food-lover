@@ -12,10 +12,14 @@ code {
     monospace;
 }
 
+.home-page {
+  padding: 240px 0 0 500px;
 
-#navbar {
+}
+
+#navbar{
   position: absolute;
+  flex-direction: row;
   margin: 0 auto;
-  top: 1.5%;
-
+  top: 10px;
 }

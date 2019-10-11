@@ -76,7 +76,7 @@ const link = {
   
   const Home = () => {
     return(
-    <div>
+    <div className="home-page">
       <h1> Welcome to My Clone of Yelp!</h1> 
       <p> Hurry up and Search something! I am getting hungry!</p>
     </div>
@@ -88,14 +88,14 @@ ReactDOM.render(
       <App />
       <Router>
           <Navbar />
-          <div>   
+          <React.Fragment>  
             <Route exact path="/" component={Home}/>
             <Route exact path="/search_featured_event" component={featuredEventInput}/>
             <Route exact path="/search_businesses" component={SearchBusinessesInput}/>
             <Route exact path="/signup" component={Signup}/>
             <Route exact path="/login" component={Login}/>
-          </div>     
-      </Router>
+            </React.Fragment>
+        </Router>
     </Provider>,
     document.getElementById('root')
 );

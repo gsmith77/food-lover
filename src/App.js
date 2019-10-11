@@ -8,7 +8,7 @@ export class App extends Component{
 
   render(){
     return (
-      <div className="App">
+      <div className="app">
         <BusinessesContainer />
         <FeaturedEventContainer />
         {this.props.currentUser !== null ? <User currentUser={this.props.currentUser}/> : null}

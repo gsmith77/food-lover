@@ -1,4 +1,34 @@
 .input{
-    margin-top: 3.5%;
+    padding: 270px 0 0 540px;
 }
 
+.looking-for-header {
+    font-weight: 400;
+    font-size: 21pt;
+    float: left;
+}
+
+.looking-for-inputbox {
+    margin-left: 14px;
+    margin-top: 29px; 
+    font-size: 14pt;
+}
+
+.location-header {
+    font-weight: 400;
+    font-size: 21pt;
+    clear: both;
+    float: left;
+}
+
+.location-inputbox {
+    margin-top: 55px;
+    margin-left: 15px;
+    font-size: 14pt;
+}
+
+.submit-button {
+    margin-left: 321px;
+    margin-top: 20px;
+    width: 120px;
+}

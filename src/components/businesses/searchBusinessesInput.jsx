@@ -34,12 +34,13 @@ export class SearchBusinessesInput extends Component {
      
             <div className="input">
                 <form onSubmit={this.handleSubmit} id="search-businesses-input">
-                    <label>What Are You Looking For?</label>
-                    <input type="text" name="term" value={this.state.term} onChange={this.handleChange}/>
-                    {"\n"}
-                    <label>Location:</label>
-                    <input type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
-                    <input type="submit"/>
+                    <h2 className="looking-for-header">What Are You Looking For?</h2>
+                    <input className="looking-for-inputbox" type="text" name="term" value={this.state.term} onChange={this.handleChange}/>
+                    <br/>
+                    <h2 className="location-header">Location:</h2>
+                    <input className="location-inputbox" type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
+                    <br/>
+                    <input className="submit-button" type="submit"/>
                 </form>
             </div>
         )

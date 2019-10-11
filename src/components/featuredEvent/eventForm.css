@@ -1,0 +1,13 @@
+.event-input-form {
+    padding: 270px 50px 50px 320px;
+    float: left;
+}
+
+.location-label {
+    padding: 270px 0 0 310px;
+}
+
+.zipcode-label {
+    font-weight: 400;
+    font-size: 21pt;
+}

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './eventForm.css'
 import { fetchEvents } from '../../actions/fetchEvents'
 import { connect } from 'react-redux'
 
@@ -25,13 +26,13 @@ export class featuredEventInput extends Component {
     }
 
     render(){
-        var divStyle={position:'relative',
-        bottom: '-30px'}
         return(
-            <div style={divStyle}>
+            <div className="event-input-form">
                 <form onSubmit={this.handleSubmit}>
-                    <label>Enter Your Zip Code, City or State to find The Featured Events Near You!</label>
-                    <label>Location:</label>
+                    <h2 className="zipcode-label">Enter Your Zip Code, City or State to find The Featured Events Near You!</h2>
+                    <br/>
+                    <br/>
+                    <label className="location-label">Location:</label>
                     <input type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
