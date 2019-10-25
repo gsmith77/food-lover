@@ -23,7 +23,7 @@
   },
   "engines": {
     "npm": "6.11.3",
-    "node": "12.12.0"
+    "node": "10.17.0"
   },
   "scripts": {
     "start": "react-scripts start",
