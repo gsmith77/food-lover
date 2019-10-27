@@ -1,4 +1,3 @@
-require 'pry'
 require 'json'
 require 'rest-client' 
 module Api
