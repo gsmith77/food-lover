@@ -1,16 +1,29 @@
 {
+<<<<<<< HEAD
+    "name": "yelp-clone",
+    "license": "MIT",
+    "engines": {
+      "node": "10.17.0",
+      "yarn": "1.15.2"
+    },
+    "scripts": {
+      "build": "yarn --cwd src install && yarn --cwd crs build",
+      "deploy": "cp -a src/build/. public/",
+      "heroku-postbuild": "yarn build && yarn deploy"
+    }
+  }
+=======
   "name": "yelp-clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gsmith77.github.io/yelp-clone",
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.1.0",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "popper.js": "^1.15.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-facebook-login": "^4.1.1",
     "react-numeric-input": "^2.2.3",
     "react-redux": "^7.1.0",
@@ -19,11 +32,11 @@
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "webpacker": "^4.6.0"
+    "webpacker": "^4.4.0"
   },
   "engines": {
-    "npm": "6.11.3",
-    "node": "10.17.0"
+    "npm": "6.10.3",
+    "node": "12.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,3 +60,4 @@
     ]
   }
 }
+>>>>>>> parent of 23e955f8... updated css for businesses
