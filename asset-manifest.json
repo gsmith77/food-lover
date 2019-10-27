@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yelp-clone/static/css/main.278f3ba2.chunk.css",
+    "main.js": "/yelp-clone/static/js/main.f6d698ba.chunk.js",
+    "main.js.map": "/yelp-clone/static/js/main.f6d698ba.chunk.js.map",
+    "runtime~main.js": "/yelp-clone/static/js/runtime~main.a51639b2.js",
+    "runtime~main.js.map": "/yelp-clone/static/js/runtime~main.a51639b2.js.map",
+    "static/js/2.38d68af0.chunk.js": "/yelp-clone/static/js/2.38d68af0.chunk.js",
+    "static/js/2.38d68af0.chunk.js.map": "/yelp-clone/static/js/2.38d68af0.chunk.js.map",
+    "index.html": "/yelp-clone/index.html",
+    "precache-manifest.0382627f714c4710057c0cb9595bd607.js": "/yelp-clone/precache-manifest.0382627f714c4710057c0cb9595bd607.js",
+    "service-worker.js": "/yelp-clone/service-worker.js",
+    "static/css/main.278f3ba2.chunk.css.map": "/yelp-clone/static/css/main.278f3ba2.chunk.css.map"
+  }
+}
