@@ -1,4 +1,3 @@
-import './businessDisplay.css'
 import React, {Component} from 'react'
 import Business from './Business'
 
@@ -12,11 +11,12 @@ export default class Businesses extends Component {
         }
 
         return (
-            <React.Fragment>
-                <ol className="list-of-businesses" style={{margin: 10}}>
+            <div>
+                <ol id="list-of-businesses" style={{margin: 10}}>
                     {generateBusinesses()}
                 </ol>
-            </React.Fragment>            
+            </div>
+            
         )
     }
 

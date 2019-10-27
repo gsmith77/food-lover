@@ -14,7 +14,7 @@ class Business extends Component {
             fontsize: '16px'}
         const business = this.props.business
         return(
-            <div className="business">
+            <div>
                 <li align="left" key={business.id}>
                     <h4>{business.name}</h4>
                     <img style={{align: 'left', width: '500px'}}alt="single business" id={business.name} src={business.image_url}></img>
