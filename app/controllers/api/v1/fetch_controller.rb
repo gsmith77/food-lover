@@ -36,9 +36,10 @@ module Api
 
             def search_events
                 location = params[:location]
+                date = params[:date]
                 response = RestClient::Request.execute(
                     method: "GET",
-                    url: "https://api.yelp.com/v3/events?location=#{location}",  
+                    url: "https://api.yelp.com/v3/events?location=#{location}&start_date=#{date}&limit=10",  
                     headers: { Authorization: "Bearer #{ENV["YELP_API_KEY"]}" }  
                 )    
                 results = JSON.parse(response.body)

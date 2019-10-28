@@ -7,7 +7,8 @@ export class featuredEventInput extends Component {
     constructor(){
         super()
         this.state={
-            location: ''
+            location: '',
+            date: ''
         }
     }
 
@@ -21,7 +22,8 @@ export class featuredEventInput extends Component {
         event.preventDefault()
         this.props.fetchEvents(this.state)
         this.setState({
-            location: ''
+            location: '',
+            date: ''
         })
     }
 
@@ -33,7 +35,9 @@ export class featuredEventInput extends Component {
                     <br/>
                     <br/>
                     <label className="location-label">Location:</label>
-                    <input className="location-inputbox"type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
+                    <input className="location-inputbox" type="text" name="location" value={this.state.location} onChange={this.handleChange}/>
+                    <label className="date-label">Date:</label>
+                    <input className="date-inputbox" type="text" name="date" value={this.state.data} onChange={this.handleChange}/>
                     <br/>
                     <input className="submit-button" type="submit"/>
                 </form>

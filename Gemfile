@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.1'
+ruby '2.6.5'
 
 gem 'foreman', '~> 0.82.0'
 gem 'rest-client', '~> 2.1.0'
