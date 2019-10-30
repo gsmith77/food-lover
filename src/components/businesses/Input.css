@@ -9,38 +9,26 @@
     display: inline-block;
 }
 
+.list-of-businesses{
+    padding-top: 30px;
+}
+
 .looking-for-header {
-    margin-left: 5%;
     font-weight: 400;
     font-size: 21pt;
-    float: left;
 }
 
 .looking-for-inputbox {
-    margin-left: 4%;
-    margin-top: 29px; 
+    text-align: center;
     font-size: 14pt;
 }
 
 .location-header {
-    margin-left: 5%;
     font-weight: 400;
     font-size: 21pt;
-    clear: both;
-    float: left;
 }
 
 .location-inputbox {
     text-align: center;
-    margin-top: 4%;
-    margin-left: 4%;
     font-size: 14pt;
-    clear: both;
-}
-
-.submit-button {
-    /* display: inline-block; */
-    margin-right: -41%;
-    margin-left: 220px;
-    width: 120px;
 }

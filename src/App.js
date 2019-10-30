@@ -7,11 +7,12 @@ import {connect} from 'react-redux'
 export class App extends Component{
 
   render(){
+
     return (
       <div className="app">
         <BusinessesContainer />
         <FeaturedEventContainer />
-        {this.props.currentUser !== null ? <User currentUser={this.props.currentUser}/> : null}
+        {localStorage.length !== 0 ? <User currentUser={JSON.parse(localStorage.currentUser)}/> : null}
       </div>
     );
   }
@@ -19,7 +20,8 @@ export class App extends Component{
 
 const mapStateToProps = (state) => {
   return {
-      currentUser: state.user.currentUser}
+      currentUser: state.user.currentUser
+    }
 }
 
 export default connect(mapStateToProps)(App)

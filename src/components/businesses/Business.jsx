@@ -3,21 +3,25 @@ import ReviewsContainer from '../../containers/ReviewsContainer'
 
 class Business extends Component {
 
-    handleClick = (event) => {
-        event.preventDefault()
+    handleClickRevealReviews = (event) => {
+        event.preventDefault();
+        this.refs.btn.setAttribute('disabled', 'disabled')
         this.props.fetchReviews({id: this.props.business.id, name: this.props.business.name})
     }
+
     render(){
-        const buttonStyle ={padding: '15px 32px',
+        const buttonStyle = {
+            padding: '15px 32px',
             textalign: 'center',
             display: 'inline-block',
-            fontsize: '16px'}
+            fontsize: '16px'
+        }
         const business = this.props.business
         return(
-            <div>
+            <React.Fragment>
                 <li align="left" key={business.id}>
                     <h4>{business.name}</h4>
-                    <img style={{align: 'left', width: '500px'}}alt="single business" id={business.name} src={business.image_url}></img>
+                    <img style={{align: 'left', width: '500px'}} alt="single business" id={business.name} src={business.image_url}></img>
                     <br/>
                     <section>
                     Price: {business.price}
@@ -29,10 +33,10 @@ class Business extends Component {
                     <br/>                
                     </section>
                     <br/>
-                    <button style={buttonStyle} onClick={this.handleClick}>Reviews</button>
+                    <button ref="btn" style={buttonStyle} onClick={this.handleClickRevealReviews}>Reviews</button>
                     <ReviewsContainer business={business}/>
                 </li>
-            </div>
+            </React.Fragment>
         )
     }
 }

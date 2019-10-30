@@ -3,7 +3,7 @@ export default function userReducer(state={currentUser: {}}, action){
         case 'LOGIN_USER':
         //set user that was created as currentUser for 
         //state management across the App
-
+            debugger
             return {...state, currentUser: action.payload}
 
         case 'LOGOUT_USER':

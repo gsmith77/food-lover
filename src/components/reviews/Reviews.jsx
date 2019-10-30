@@ -6,15 +6,16 @@ class Reviews extends Component {
 
     render(){
         const thisBusinessesReviews = () => {
-            let newProps = this.props.reviews.filter(review => { return (review.businessId === this.props.business.id)})
+            let newProps = this.props.reviews.filter(review => { 
+                return (review.business_id === this.props.business.id)})
             return newProps
         }
-
+        
         const renderReviews = () => {
             return thisBusinessesReviews().map(review => {
-                debugger
+                
                     return(
-                        <React.Fragment>
+                        <React.Fragment key={review.id}>
                             <li style={{width: '300px'}} key={review.id}>
                                 <h4>{review.user ? review.user.name : review.user_name}</h4>
                                 {"\n"}
@@ -41,7 +42,8 @@ class Reviews extends Component {
 
 const mapStateToProps = state => {
     return{
-        businesses: state.businesses.businesses
+        businesses: state.businesses.businesses,
+        reviews: state.businesses.reviews
     }
 }
 

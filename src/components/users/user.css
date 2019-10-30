@@ -10,3 +10,14 @@
     font-size: 50pt;
     font-weight: 50;
 }
+
+.userShowPage {
+    position: absolute;
+    right: 10px;
+    top: -15px;
+}
+
+.userShowPage button{
+    position: inherit;
+    right: 0px;
+}

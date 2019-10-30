@@ -16,12 +16,15 @@ export default function businessReducer(state = {loading: false, businesses: [],
             return Object.assign({}, {...state}, {loading: true})
 
         case 'FETCH_REVIEWS':
-            const newReviews= action.payload[0].map(review => {
-                return(review = {...review, businessId: action.payload[1] })
+            const newReviewsWBizIds = action.payload[0].map(review => {
+                return review = {...review, business_id: action.payload[1]}
             })
-            return {...state, reviews: [...state.reviews, newReviews].flat(), loading:false} 
+            //go through reviews in database and make business Id for review the id from yelps business id
+            return {...state, reviews: [...state.reviews, newReviewsWBizIds].flat(), loading: false} 
 
         default:
+
             return state
+
     }
 }

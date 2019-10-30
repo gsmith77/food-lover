@@ -11,8 +11,8 @@ export default class Businesses extends Component {
         }
 
         return (
-            <div>
-                <ol id="list-of-businesses" style={{margin: 10}}>
+            <div className="container">
+                <ol className="list-of-businesses">
                     {generateBusinesses()}
                 </ol>
             </div>

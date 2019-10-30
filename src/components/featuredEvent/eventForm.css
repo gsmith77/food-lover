@@ -26,3 +26,16 @@
     width: 120px;
     font-size: 18pt;
 }
+
+.event{
+    /* margin: 100px 0 100px 0;
+    padding: 150px 0 150px 0; */
+    right: 50%;
+    text-align: center;
+    max-width: 50%;
+}
+
+.event img{
+    max-height: 500px;
+    max-width: 500px;
+}

@@ -5,7 +5,7 @@ export const fetchBusinesses = (props) => {
         .then(resp => resp.json())
         .then(businesses => {
             dispatch({type:'FETCH_BUSINESSES', payload: businesses})
-            })
+        })
     }
     
     //do error handing on each action.

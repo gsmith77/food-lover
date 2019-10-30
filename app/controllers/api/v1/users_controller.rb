@@ -7,14 +7,13 @@ module Api
                 #find or create by since the user could exist
                 #check if passwords are same then check if there is a user already in database      
                 @user = User.find_by(email: user_params['email'])
-                @user.remember_me!
+                #use session to create current user
                 if @user 
                     render json: @user
                 else
                     @user = User.new(user_params)
                     if @user.save
                         #remember_token is good for two weeks of remembering user for future reference                        
-                        @user.remember_me!
                         render json: @user
                     else
                         render json: {status: 404, message: @user.errors}

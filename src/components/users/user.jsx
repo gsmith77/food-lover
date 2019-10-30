@@ -1,4 +1,5 @@
 import React from 'react'
+import './user.css'
 import {logOutUser} from '../../actions/logOutUser'
 import {connect} from 'react-redux'
 
@@ -13,7 +14,7 @@ class User extends React.Component{
         const currentUser = this.props.currentUser
         if (currentUser !== null){
             return(
-                <div id="userShowPage">
+                <div className="userShowPage">
                     <h1>{currentUser.email}</h1>
                     {"\n"}
                     <button onClick={() => this.logout(currentUser.id)}>Log Out</button>
