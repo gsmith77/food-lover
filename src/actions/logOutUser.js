@@ -1,6 +1,6 @@
-export const logOutUser = (userId) => {
+export const logOutUser = (userEmail) => {
     return (dispatch) => {
-        return fetch(`http://localhost:3000/api/v1/logout?id=${userId}`)
+        return fetch(`http://localhost:3000/api/v1/logout?email=${userEmail}`)
         .then(resp => resp.json())
         .then(data => {
             alert(data.message)

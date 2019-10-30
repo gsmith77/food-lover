@@ -1,6 +1,6 @@
 .input{
     text-align: center;
-    padding: 230px;
+    padding: 220px;
     top: 50%;
     left: 50%;
 }
@@ -11,6 +11,11 @@
 
 .list-of-businesses{
     padding-top: 30px;
+}
+
+.form-header {
+    font-size: 45pt;
+    font-weight: 50;
 }
 
 .looking-for-header {

@@ -1,4 +1,6 @@
-export const postReview = (review) => {
+import { connect } from "react-redux";
+
+export const postReview = (review, reviews) => {
     return (dispatch) => {
       try{
         var user = JSON.parse(localStorage.currentUser)
@@ -17,10 +19,9 @@ export const postReview = (review) => {
           })
         .then(resp => resp.json())
         .then(data => {
-            debugger
             //check how many reviews there are now
             //AJAX to now show the new one at the top
-            dispatch({type: 'FETCH_REVIEWS', payload: data})
+            dispatch({type: 'ADD_REVIEW', payload: [data, reviews]})
             //error handle
             //dispatch to store reviews and display them
         })
@@ -28,7 +29,17 @@ export const postReview = (review) => {
       catch{
         //error catch if there is no current user
         alert('Please Log In To Be Able Leave A Review.')
-
       }
     }
 }
+
+
+const mapStateToProps = (state) => {
+  debugger
+  return {
+    reviews: state.business.reviews
+  }
+}
+
+
+export default connect(mapStateToProps)(postReview)

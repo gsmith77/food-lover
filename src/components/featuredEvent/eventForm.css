@@ -1,5 +1,5 @@
 .event-input-form {
-    padding: 270px;
+    padding: 220px;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -7,29 +7,28 @@
 }
 
 .zipcode-label {
-    font-weight: 400;
-    font-size: 21pt;
+    font-size: 35pt;
+    font-weight: 50;
 }
 
-.location-label {
-    /* padding: 270px 0 0 210px; */
+.location-label, .date-label  {
+    padding-left: 10px;
     text-align: center;
     font-weight: 400;
-    font-size: 21pt;
+    font-size: 24pt;
 }
 
-.location-inputbox {
+.location-inputbox, .date-inputbox  {
     font-size: 14pt;
 }
 
 .submit-button {
+    margin-top: 60px;
+    text-align: center;
     width: 120px;
-    font-size: 18pt;
 }
 
 .event{
-    /* margin: 100px 0 100px 0;
-    padding: 150px 0 150px 0; */
     right: 50%;
     text-align: center;
     max-width: 50%;

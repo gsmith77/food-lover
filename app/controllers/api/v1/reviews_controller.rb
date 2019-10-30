@@ -7,26 +7,17 @@ module Api
             end
 
             def create
-                user = User.find(params['review']['user']['id'])
+                user = User.find_by(email: params['review']['user']['email'])
                 business = Business.find_by(name: params['review']['business']['name'])
                 @review = Review.new(text: params['review']['text'], rating: params['review']['rating'], user_name: params['review']['user_name'], business_id: business.id, user_id: user.id)
                 # review_params['user']
-
-
-
-                #find business according to the review business id 
-                #render those reviews at well.
-
-                binding.pry
-
-
 
                 # FIX THESE ISSUES
                 #business
         # @details={:business=>[{:error=>:blank}], :user=>[{:error=>:blank}]},
         # @messages={:business=>["must exist"], :user=>["must exist"]}
                 if @review.save
-                    render json: @review, 
+                    render json: @review
                 else
                     render json: @review.errors
                 end

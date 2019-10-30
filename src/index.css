@@ -17,16 +17,12 @@ code {
 }
 
 .home-page {
-  padding: 270px 0 0 510px;
+  padding: 240px 0 0 410px;
 }
 
-.home-h1{
-  font-size: 30pt;
-}
-
-.subtitle-h3 {
-  font-size: 15pt;
-  padding-left: 24px;
+.home-h1 {
+  font-size: 40pt;
+  font-weight: 50;
 }
 
 #navbar{

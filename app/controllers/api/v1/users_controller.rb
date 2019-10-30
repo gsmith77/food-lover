@@ -34,7 +34,7 @@ module Api
             end
 
             def logout
-                @user = User.find(params['id']).forget_me!
+                @user = User.find_by(email: params['email'])
                 render json: {status: 200, message: 'You are logged out'}
             end
 

@@ -34,24 +34,25 @@ class Login extends Component {
         <form onSubmit={this.handleSubmit}>
           <h1 className="login-header">Login</h1>
 
-          <label>Email</label>
+          <label className="email-label">Email</label>
           <input
+            className="email-inputbox"
             name='email'
             placeholder='Email'
             value={this.state.email}
             onChange={this.handleChange}
             /><br/>
 
-          <label>Password</label>
+          <label className="password-label">Password</label>
           <input
+            className="password-inputbox"
             type='password'
             name='password'
             placeholder='Password'
             value={this.state.password}
             onChange={this.handleChange}
             /><br/>
-
-          <input type='submit' value='Log In'/>
+          <input className="submit-button" type='submit' value='Log In'/>
         </form>
       </div>
     )

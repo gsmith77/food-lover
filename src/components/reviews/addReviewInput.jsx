@@ -28,11 +28,20 @@ class AddReviewInput extends Component {
     handleSubmit = (event) => {
       event.preventDefault()
       //grab currentuser from localstorage
-      this.props.postReview(this.state)
+      this.props.postReview(this.state, this.props.reviews)
+      try{
+        const newReview = {first_name: this.state.user.first_name, last_name: this.state.user.last_name, text: this.state.text, rating: this.state.rating}
+        this.props.reviews.unshift(newReview)
+      }
+      catch{
+      }
+      //add new review to front of reviews
       this.setState({
         text: '',
         rating: 1
       })
+      //reset components' state
+      //needs to make reviews update now dynamically on page
     }
     
     render(){

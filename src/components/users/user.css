@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 
-.login-header {
+.login-header, .signup-header   {
     font-size: 50pt;
     font-weight: 50;
 }
@@ -20,4 +20,10 @@
 .userShowPage button{
     position: inherit;
     right: 0px;
+}
+
+.first-name-label, .last-name-label, .email-label, .password-label, .submit-button, .first-name-inputbox, .last-name-inputbox, .email-inputbox, .password-inputbox, .email-label, .email-inputbox, .password-label, .password-inputbox{
+    font-size: 16pt;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }

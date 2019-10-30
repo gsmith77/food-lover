@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 
 class Reviews extends Component {
 
+
+    //do shouldComponentUpdate() due to new state with recently
+    //added review.
+
     render(){
         const thisBusinessesReviews = () => {
             let newProps = this.props.reviews.filter(review => { 
@@ -12,28 +16,32 @@ class Reviews extends Component {
         }
         
         const renderReviews = () => {
-            return thisBusinessesReviews().map(review => {
-                
-                    return(
-                        <React.Fragment key={review.id}>
-                            <li style={{width: '300px'}} key={review.id}>
-                                <h4>{review.user ? review.user.name : review.user_name}</h4>
-                                {"\n"}
-                                <p>Rating: {review.rating}</p>
-                                {"\n"}
-                                <p>{review.text}</p>
-                            </li>
-                        </React.Fragment>
-                    )
-                }
-            )
-        }
+            return(
+                    <ul className="business-reviews">
+                        {thisBusinessesReviews().map(review => {
+                            return(
+                                    <React.Fragment key={review.id}>
+                                        <li style={{width: '300px'}} key={review.id}>
+                                            <h4>{review.user ? review.user.name : review.user_name}</h4>
+                                            {"\n"}
+                                            <p>Rating: {review.rating}</p>
+                                            {"\n"}
+                                            <p>{review.text}</p>
+                                        </li>
+                                    </React.Fragment>
+                                )}
+                            )
+                        }
+                    </ul>
+                )
+            }
+            
 
 
            return(
-                <div id="reviews">
+                <div className="reviews">
                     {renderReviews()}
-                    <AddReviewInput business={this.props.business}/>
+                    <AddReviewInput reviews={thisBusinessesReviews()} business={this.props.business}/>
                 </div>
            )
 

@@ -5,9 +5,12 @@ import {connect} from 'react-redux'
 
 class User extends React.Component{
 
-    logout = (currentUserId) => {
+    logout = (currentUserEmail) => {
+        alert(`Have a great day ${this.props.currentUser.first_name}`)
         localStorage.removeItem("currentUser")
-        this.props.logOutUser(currentUserId)
+        this.props.logOutUser(currentUserEmail)
+        window.location.reload(false);
+        //PAGE REFRESH TO TAKE AWAY CURRENT USER FOR GOOD
     }
 
     render(){
@@ -17,7 +20,7 @@ class User extends React.Component{
                 <div className="userShowPage">
                     <h1>{currentUser.email}</h1>
                     {"\n"}
-                    <button onClick={() => this.logout(currentUser.id)}>Log Out</button>
+                    <button onClick={() => this.logout(currentUser.email)}>Log Out</button>
                 </div>
             )
         }
