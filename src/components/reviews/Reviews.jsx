@@ -17,7 +17,7 @@ class Reviews extends Component {
         
         const renderReviews = () => {
             return(
-                    <ul className="business-reviews">
+                    <ul id="business-reviews">
                         {thisBusinessesReviews().map(review => {
                             return(
                                     <React.Fragment key={review.id}>

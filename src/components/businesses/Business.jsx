@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import ReviewsContainer from '../../containers/ReviewsContainer'
+import { connect } from 'react-redux'
+import { fetchReviews } from '../../actions/fetchReviews'
 
 class Business extends Component {
 
@@ -33,7 +35,7 @@ class Business extends Component {
                     <br/>                
                     </section>
                     <br/>
-                    <button ref="btn" style={buttonStyle} onClick={this.handleClickRevealReviews}>Reviews</button>
+                    <button ref="btn" id="display-reviews-btn" style={buttonStyle} onClick={this.handleClickRevealReviews}>Reviews</button>
                     <ReviewsContainer business={business}/>
                 </li>
             </React.Fragment>
@@ -41,4 +43,4 @@ class Business extends Component {
     }
 }
 
-export default Business
+export default connect(null, {fetchReviews})(Business)

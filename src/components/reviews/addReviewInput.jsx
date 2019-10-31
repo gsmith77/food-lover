@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {postReview} from '../../actions/postReview'
 import { connect } from 'react-redux';
 import NumericInput from 'react-numeric-input';
+import { fetchReviews } from '../../actions/fetchReviews'
 
 class AddReviewInput extends Component {
   constructor(props){
@@ -12,6 +13,12 @@ class AddReviewInput extends Component {
         business: this.props.business
       }
     }
+
+    handleClickRevealReviews = () => {
+      document.getElementById('display-reviews-btn').disabled = false
+      document.getElementById('business-reviews').innerHTML = ""
+      this.props.fetchReviews({id: this.props.business.id, name: this.props.business.name})
+  }
 
     handleChange = (event) => {
       this.setState({
@@ -51,11 +58,11 @@ class AddReviewInput extends Component {
           <label>Leave Review</label>
           <input type="text" name="text" value={this.state.text} onChange={this.handleChange}/>
           <NumericInput min={1} max={5} name="rating" value={this.state.rating} onChange={this.changeRating}/>
-          <input type="submit" value="Add Review"/>
+          <input type="submit" onClick={event => this.handleClickRevealReviews()} value="Add Review"/>
         </form>
       </React.Fragment>
       )
     }
 }
 
-export default connect(null, {postReview})(AddReviewInput)
+export default connect(null, {postReview, fetchReviews})(AddReviewInput)

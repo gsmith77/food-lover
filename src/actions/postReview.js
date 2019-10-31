@@ -19,11 +19,14 @@ export const postReview = (review, reviews) => {
           })
         .then(resp => resp.json())
         .then(data => {
+          if(data.text !== "cant't be blank"){
             //check how many reviews there are now
             //AJAX to now show the new one at the top
             dispatch({type: 'ADD_REVIEW', payload: [data, reviews]})
-            //error handle
             //dispatch to store reviews and display them
+          }else{
+            alert('text ' + data.text.join(''))
+          }
         })
       }
       catch{

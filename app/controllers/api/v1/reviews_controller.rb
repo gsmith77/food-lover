@@ -10,12 +10,6 @@ module Api
                 user = User.find_by(email: params['review']['user']['email'])
                 business = Business.find_by(name: params['review']['business']['name'])
                 @review = Review.new(text: params['review']['text'], rating: params['review']['rating'], user_name: params['review']['user_name'], business_id: business.id, user_id: user.id)
-                # review_params['user']
-
-                # FIX THESE ISSUES
-                #business
-        # @details={:business=>[{:error=>:blank}], :user=>[{:error=>:blank}]},
-        # @messages={:business=>["must exist"], :user=>["must exist"]}
                 if @review.save
                     render json: @review
                 else
