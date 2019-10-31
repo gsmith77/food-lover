@@ -42,11 +42,10 @@ rake start
 Current Version 1.0.0
 
 
-## Authors
+## Author
 
-* **YourWork** - *Initial work* - [YourWork](https://github.com/yourrepo)
+* **Grant Smith ** - *Yelp CLone* - [Grant's Work](https://github.com/gsmith77)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
