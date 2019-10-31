@@ -44,7 +44,7 @@ Current Version 1.0.0
 
 ## Author
 
-*Yelp Clone* - [Grant's Work](https://github.com/gsmith77)
+*Grant Smithe* - [Grant's Work](https://github.com/gsmith77)
 
 
 ## License
