@@ -1,4 +1,4 @@
-# Project Title
+# Yelp Clonee
 
 Yelp Clone was made to be my app of my most used and by far favorite app around, Yelp! Yelp Clone allows a user to research different events in the area as well as look up differtent things in the area such as Restaurants. Use Yelp Clone to find entertainment near you! 
 
@@ -45,6 +45,10 @@ Current Version 1.0.0
 ## Author
 
 *Grant Smithe* - [Grant's Work](https://github.com/gsmith77)
+
+## Video Walkthrough
+
+[Walkthrough](https://youtu.be/PaHHqhW7-HI)
 
 
 ## License
