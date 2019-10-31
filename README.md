@@ -57,7 +57,7 @@ Current Version 1.0.0
 
 ## Author
 
-*Grant Smithe* - [Grant's Work](https://github.com/gsmith77)
+*Grant Smith* - [Grant's Work](https://github.com/gsmith77)
 
 ## Video Walkthrough
 
