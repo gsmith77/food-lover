@@ -16,7 +16,7 @@ class AddReviewInput extends Component {
 
     handleClickRevealReviews = () => {
       document.getElementById('display-reviews-btn').disabled = false
-      document.getElementById('business-reviews').innerHTML = ""
+      document.getElementsByClassName('business-reviews-' + `${this.props.business.id}`)[0].innerHTML = ""      
       this.props.fetchReviews({id: this.props.business.id, name: this.props.business.name})
   }
 

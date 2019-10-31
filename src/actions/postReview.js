@@ -38,7 +38,6 @@ export const postReview = (review, reviews) => {
 
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     reviews: state.business.reviews
   }

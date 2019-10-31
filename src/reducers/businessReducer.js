@@ -25,7 +25,6 @@ export default function businessReducer(state = {loading: false, businesses: [],
         case 'ADD_REVIEW':
             //action.paylod[0] = review that was just added
             //aciton.payload[1] = the 3-5 reviews before it
-            debugger
             let reviews = [action.payload[0], action.payload[1]].flat()
             return {...state, reviews, loading: false}
         default:
