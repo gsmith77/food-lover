@@ -6,6 +6,16 @@ Yelp Clone was made to be my app of my most used and by far favorite app around,
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
 
+You will need to make a Yelp Fusion account to be able to receive data from Yelp.
+
+Start by going to https://www.yelp.com/fusion and clicking 'Get Started'
+
+Log in with Google or Facebook or Create your own account
+
+There copy your Yelp API Key
+
+
+
 ### Prerequisites
 
 Make sure to use rvm to switch to the most current ruby version
@@ -21,6 +31,9 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
+git clone repo
+touch .env
+set YELP_API_KEY=YOUR_API_KEY_GOES_HERE
 bundle install
 ```
 
