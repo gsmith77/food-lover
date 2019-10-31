@@ -1,4 +1,4 @@
-# Yelp Clonee
+# Yelp Clone
 
 Yelp Clone was made to be my app of my most used and by far favorite app around, Yelp! Yelp Clone allows a user to research different events in the area as well as look up differtent things in the area such as Restaurants. Use Yelp Clone to find entertainment near you! 
 
@@ -31,7 +31,7 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-git clone repo
+git clone git@github.com:gsmith77/yelp-clone.git
 touch .env
 set YELP_API_KEY=YOUR_API_KEY_GOES_HERE
 bundle install
