@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'foreman', '~> 0.82.0'
 gem 'rest-client', '~> 2.1.0'
-gem 'json', '~> 2.2.0'
+gem 'json', '~> 2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
